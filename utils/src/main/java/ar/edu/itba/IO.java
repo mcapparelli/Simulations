@@ -3,53 +3,43 @@ package ar.edu.itba;
 import java.io.*;
 import java.util.*;
 
-public class Parser {
+public class IO {
     private  BufferedReader staticBuffer;
     private  BufferedReader dynamicBuffer;
     int n;
     int l;
     int m;
     double rc;
-    List<Molecule> molecules;
+    List<Particle> particles;
     int time;
     boolean periodic;
 
-    public Parser(String s, String d) {
-
+    public IO(String s, String d) {
         File staticFile = new File(s);
         File dinamicFile = new File(d);
         time=0;
-        molecules = new ArrayList<>();
-
+        particles = new ArrayList<>();
         try {
             staticBuffer = new BufferedReader(new FileReader(staticFile));
             dynamicBuffer = new BufferedReader(new FileReader(dinamicFile));
-
         } catch (FileNotFoundException e) {
             e.printStackTrace();
-
         }
-
         try {
             n = Integer.parseInt(staticBuffer.readLine());
             l = Integer.parseInt(staticBuffer.readLine());
             m = Integer.parseInt(staticBuffer.readLine());
             rc = Double.parseDouble(staticBuffer.readLine());
             periodic = staticBuffer.readLine().equals("periodic");
-
-            for (int i=0; i<n; i++){
-               String[] array= staticBuffer.readLine().split(" ");
-               molecules.add(new Molecule(Double.parseDouble(array[0]),new Property<String>("property"),null,0,0));
+            for (int i = 0; i < n; i++){
+               String[] array = staticBuffer.readLine().split(" ");
+               particles.add(new Particle(Double.parseDouble(array[0]), new Property<String>("property"),null,0,0));
             }
             staticBuffer.close();
-
         }catch (IOException e){
             e.printStackTrace();
         }
-
         //System.out.println("N:"+n+" L:"+l+" m:"+m+" rc:"+rc);
-
-
     }
 
     public int getN() {
@@ -66,9 +56,8 @@ public class Parser {
         return rc;
     }
 
-    public Set<Molecule> getMolecules() {
-    Set<Molecule> response = new HashSet<>();
-
+    public Set<Particle> getParticles() {
+    Set<Particle> response = new HashSet<>();
         try{
             if (!dynamicBuffer.readLine().equals("t"+time)){
                 throw new IllegalArgumentException();
@@ -76,13 +65,13 @@ public class Parser {
             for(int i =0; i<n ; i++){
                 String line = dynamicBuffer.readLine();
                 String[] data = line.split(" ");
-                Molecule current = molecules.get(i);
+                Particle current = particles.get(i);
                 double x,y,v,angle;
                 x=Double.parseDouble(data[0]);
                 y=Double.parseDouble(data[1]);
                 v=Double.parseDouble(data[2]);
                 angle=Double.parseDouble(data[3]);
-                response.add(new Molecule(current.getId(),current.getRatio(),null,new Point(x,y),v,angle));
+                response.add(new Particle(current.getId(),current.getRatio(),null,new Point(x,y),v,angle));
             }
         }catch (IOException e){
             e.printStackTrace();

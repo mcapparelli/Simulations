@@ -3,37 +3,36 @@ package ar.edu.itba;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
-import java.sql.Time;
 import java.util.*;
 
 public class Engine {
 
     private Grid grid;
-    private Map<Molecule,Set<Molecule>> neighbors;
+    private Map<Particle,Set<Particle>> neighbors;
     int m;
 
-    public Engine(int l, int n, int m, double rc, boolean periodic, Set<Molecule> molecules) {
+    public Engine(int l, int m, double rc, boolean periodic, Set<Particle> particles) {
         this.m = m;
-        grid = new Grid(l,n,m,rc,molecules,periodic);
+        grid = new Grid(l,m,rc, particles,periodic);
         neighbors = new HashMap<>();
     }
 
     public void getNeighborsOfMolecule(){
         for(int i = 0; i < m; i++){
             for(int j = 0 ; j < m ; j++){
-                Map<Molecule,Set<Molecule>> map = grid.analyzeCell(new Point(i,j));
-                for(Molecule molecule : map.keySet()) {
-                    if (neighbors.containsKey(molecule)) {
-                        neighbors.get(molecule).addAll(map.get(molecule));
+                Map<Particle,Set<Particle>> map = grid.analyzeCell(new Point(i,j));
+                for(Particle particle : map.keySet()) {
+                    if (neighbors.containsKey(particle)) {
+                        neighbors.get(particle).addAll(map.get(particle));
                     } else {
-                        neighbors.put(molecule, map.get(molecule));
+                        neighbors.put(particle, map.get(particle));
                     }
-                    for (Molecule m : map.get(molecule)) {
+                    for (Particle m : map.get(particle)) {
                         if (neighbors.containsKey(m)) {
-                            neighbors.get(m).add(molecule);
+                            neighbors.get(m).add(particle);
                         } else {
-                            HashSet<Molecule> set = new HashSet<>();
-                            set.add(molecule);
+                            HashSet<Particle> set = new HashSet<>();
+                            set.add(particle);
                             neighbors.put(m, set);
                         }
                     }
@@ -43,7 +42,7 @@ public class Engine {
 
     }
 
-    public Map<Molecule,Set<Molecule>> start(){
+    public Map<Particle,Set<Particle>> start(){
             getNeighborsOfMolecule();
         return neighbors;
     }
@@ -56,13 +55,12 @@ public class Engine {
         }
     }
 
-
-    public static String generateFileString(Molecule molecule, Set<Molecule> neighbours,Set<Molecule> allMolcules){
+    public static String generateFileString(Particle particle, Set<Particle> neighbours, Set<Particle> allMolcules){
         StringBuilder builder = new StringBuilder()
                 .append(allMolcules.size())
                 .append("\r\n")
                 .append("//ID\t X\t Y\t Radius\t R\t G\t B\t\r\n");
-        for(Molecule current: allMolcules){
+        for(Particle current: allMolcules){
             builder.append(current.getId())
                     .append(" ")
                     .append(current.getLocation().getX())
@@ -71,7 +69,7 @@ public class Engine {
                     .append(" ")
                     .append(current.getRatio())
                     .append(" ");
-            if(molecule.getId() == current.getId()){
+            if(particle.getId() == current.getId()){
                 builder.append("1 0 0\r\n");
             }else if(neighbours.contains(current)){
                 builder.append("0 1 0\r\n");
@@ -82,18 +80,16 @@ public class Engine {
         return builder.toString();
     }
 
-    public Map<Molecule,Set<Molecule>> bruteForce(Set<Molecule> molecules){
-        Map<Molecule,Set<Molecule>> ans = new HashMap<>();
-
-        for(Molecule m1: molecules){
-            ans.put(m1,new HashSet<Molecule>());
-            for(Molecule m2 : molecules){
-                if(Molecule.distanceBetweenMolecules(m1,m2)-m1.getRatio()-m2.getRatio()<=grid.getRc()){
+    public Map<Particle,Set<Particle>> bruteForce(Set<Particle> particles){
+        Map<Particle,Set<Particle>> ans = new HashMap<>();
+        for(Particle m1: particles){
+            ans.put(m1,new HashSet<Particle>());
+            for(Particle m2 : particles){
+                if(Particle.distanceBetweenMolecules(m1,m2)-m1.getRatio()-m2.getRatio() <= grid.getRc()){
                     ans.get(m1).add(m2);
                 }
             }
         }
-
         return ans;
     }
 

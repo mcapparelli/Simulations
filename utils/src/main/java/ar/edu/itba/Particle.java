@@ -1,6 +1,6 @@
 package ar.edu.itba;
 
-public class Molecule {
+public class Particle {
     private static int quantity = 0;
     private int id;
     private double ratio;
@@ -9,7 +9,7 @@ public class Molecule {
     private double velocity;
     private double angle;
 
-    public Molecule(double ratio, Property<String> property, Point location, double velocity, double angle) {
+    public Particle(double ratio, Property<String> property, Point location, double velocity, double angle) {
         quantity++;
         this.id = quantity;
         this.ratio = ratio;
@@ -18,7 +18,8 @@ public class Molecule {
         this.velocity = velocity;
         this.angle = angle;
     }
-    public Molecule(int id,double ratio, Property<String> property, Point location,  double velocity, double angle) {
+
+    public Particle(int id, double ratio, Property<String> property, Point location, double velocity, double angle) {
         this.id = id;
         this.ratio = ratio;
         this.property = property;
@@ -39,7 +40,7 @@ public class Molecule {
         return location;
     }
 
-    public static double distanceBetweenMolecules(Molecule m1, Molecule m2){
+    public static double distanceBetweenMolecules(Particle m1, Particle m2){
         return Point.distanceBetween(m1.location,m2.location);
     }
 
@@ -53,7 +54,7 @@ public class Molecule {
 
     @Override
     public String toString() {
-        return "Molecule{" +
+        return "Particle{" +
                 "id=" + id +
                 ", ratio=" + ratio +
                 ", property=" + property +
