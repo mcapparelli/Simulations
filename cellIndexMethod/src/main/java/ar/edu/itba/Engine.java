@@ -9,29 +9,25 @@ import java.util.*;
 public class Engine {
 
     private Grid grid;
-
     private Map<Molecule,Set<Molecule>> neighbors;
     int m;
 
-    public Engine(int l, int n, int m, double rc,boolean periodic, Set<Molecule> molecules) {
-        this.m=m;
+    public Engine(int l, int n, int m, double rc, boolean periodic, Set<Molecule> molecules) {
+        this.m = m;
         grid = new Grid(l,n,m,rc,molecules,periodic);
         neighbors = new HashMap<>();
     }
 
     public void getNeighborsOfMolecule(){
-        for(int i=0;i<m;i++){
-            for(int j=0 ; j<m ;j++){
+        for(int i = 0; i < m; i++){
+            for(int j = 0 ; j < m ; j++){
                 Map<Molecule,Set<Molecule>> map = grid.analyzeCell(new Point(i,j));
                 for(Molecule molecule : map.keySet()) {
-
-
                     if (neighbors.containsKey(molecule)) {
                         neighbors.get(molecule).addAll(map.get(molecule));
                     } else {
                         neighbors.put(molecule, map.get(molecule));
                     }
-
                     for (Molecule m : map.get(molecule)) {
                         if (neighbors.containsKey(m)) {
                             neighbors.get(m).add(molecule);

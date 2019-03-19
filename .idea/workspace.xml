@@ -1,7 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0b0d0e33-b037-41fd-8063-1aad5a488f1d" name="Default Changelist" comment="" />
+    <list default="true" id="0b0d0e33-b037-41fd-8063-1aad5a488f1d" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/offLatice/src/main/java/ar/edu/itba/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cellIndexMethod/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/cellIndexMethod/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cellIndexMethod/src/main/java/ar/edu/itba/Engine.java" beforeDir="false" afterPath="$PROJECT_DIR$/cellIndexMethod/src/main/java/ar/edu/itba/Engine.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cellIndexMethod/src/main/java/ar/edu/itba/Grid.java" beforeDir="false" afterPath="$PROJECT_DIR$/utils/src/main/java/ar/edu/itba/Grid.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cellIndexMethod/src/main/java/ar/edu/itba/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/cellIndexMethod/src/main/java/ar/edu/itba/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cellIndexMethod/src/main/java/ar/edu/itba/Molecule.java" beforeDir="false" afterPath="$PROJECT_DIR$/utils/src/main/java/ar/edu/itba/Molecule.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cellIndexMethod/src/main/java/ar/edu/itba/Parser.java" beforeDir="false" afterPath="$PROJECT_DIR$/utils/src/main/java/ar/edu/itba/Parser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cellIndexMethod/src/main/java/ar/edu/itba/Point.java" beforeDir="false" afterPath="$PROJECT_DIR$/utils/src/main/java/ar/edu/itba/Point.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cellIndexMethod/src/main/java/ar/edu/itba/Property.java" beforeDir="false" afterPath="$PROJECT_DIR$/utils/src/main/java/ar/edu/itba/Property.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/offLatice/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/offLatice/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/src/main/java/ar/edu/itba/App.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/src/test/java/ar/edu/itba/AppTest.java" beforeDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <ignored path="$PROJECT_DIR$/cellIndexMethod/target/" />
     <ignored path="$PROJECT_DIR$/offLatice/target/" />
@@ -15,27 +29,76 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/cellIndexMethod/src/main/java/ar/edu/itba/Algorithm.java">
+        <entry file="file://$PROJECT_DIR$/cellIndexMethod/src/main/java/ar/edu/itba/Engine.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="7" column="45" selection-start-line="7" selection-start-column="45" selection-end-line="7" selection-end-column="45" />
+            <state relative-caret-position="172">
+              <caret line="22" column="22" selection-start-line="22" selection-start-column="22" selection-end-line="22" selection-end-column="22" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/utils/src/main/java/ar/edu/itba/Grid.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="60">
+              <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/utils/src/main/java/ar/edu/itba/Point.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="60">
+              <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/utils/src/main/java/ar/edu/itba/Molecule.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="30">
+              <caret line="2" column="21" selection-start-line="2" selection-start-column="21" selection-end-line="2" selection-end-column="21" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/utils/src/main/java/ar/edu/itba/Parser.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-647">
+              <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/offLatice/src/main/java/ar/edu/itba/Main.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="300">
+              <caret line="28" selection-start-line="28" selection-end-line="28" />
               <folding>
-                <element signature="e#170#171#0" expanded="true" />
+                <element signature="e#3650#3660#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/cellIndexMethod/src/main/java/ar/edu/itba/Engine.java">
-          <provider selected="true" editor-type-id="text-editor" />
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/utils/src/main/java/ar/edu/itba/Property.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="45">
+              <caret line="3" column="15" selection-start-line="3" selection-start-column="15" selection-end-line="3" selection-end-column="15" />
+            </state>
+          </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/offLatice/src/main/java/ar/edu/itba/Algorithm.java">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/cellIndexMethod/src/main/java/ar/edu/itba/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="6" column="22" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="22" />
+            <state relative-caret-position="112">
+              <caret line="12" column="52" selection-start-line="12" selection-start-column="52" selection-end-line="12" selection-end-column="52" />
             </state>
           </provider>
         </entry>
@@ -50,7 +113,12 @@
       <list>
         <option value="$PROJECT_DIR$/offLatice/src/main/java/ar/edu/itba/App.java" />
         <option value="$PROJECT_DIR$/cellIndexMethod/src/main/java/ar/edu/itba/Algorithm.java" />
+        <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/utils/src/main/java/ar/edu/itba/Molecule.java" />
         <option value="$PROJECT_DIR$/cellIndexMethod/src/main/java/ar/edu/itba/Engine.java" />
+        <option value="$PROJECT_DIR$/offLatice/src/main/java/ar/edu/itba/Main.java" />
+        <option value="$PROJECT_DIR$/utils/src/main/java/ar/edu/itba/Property.java" />
+        <option value="$PROJECT_DIR$/cellIndexMethod/src/main/java/ar/edu/itba/Main.java" />
       </list>
     </option>
   </component>
@@ -159,6 +227,36 @@
               <item name="simulations" type="462c0819:PsiDirectoryNode" />
               <item name="utils" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="simulations" type="b2602c69:ProjectViewProjectNode" />
+              <item name="simulations" type="462c0819:PsiDirectoryNode" />
+              <item name="utils" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="simulations" type="b2602c69:ProjectViewProjectNode" />
+              <item name="simulations" type="462c0819:PsiDirectoryNode" />
+              <item name="utils" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="simulations" type="b2602c69:ProjectViewProjectNode" />
+              <item name="simulations" type="462c0819:PsiDirectoryNode" />
+              <item name="utils" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="simulations" type="b2602c69:ProjectViewProjectNode" />
+              <item name="simulations" type="462c0819:PsiDirectoryNode" />
+              <item name="utils" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="itba" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -168,10 +266,16 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1553000761076" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1553001200764" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="preferences.sourceCode" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/offLatice/src/main/java/ar/edu/itba" />
+      <recent name="$PROJECT_DIR$/cellIndexMethod/src/main/java/ar/edu/itba" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -196,15 +300,16 @@
       <option name="presentableId" value="Default" />
       <updated>1552929412757</updated>
       <workItem from="1552929414028" duration="882000" />
-      <workItem from="1552999372203" duration="681000" />
+      <workItem from="1552999372203" duration="1432000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1563000" />
+    <option name="totallyTimeSpent" value="2314000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="821" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.20171674" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -269,8 +374,70 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/cellIndexMethod/src/main/java/ar/edu/itba/Engine.java">
+    <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cellIndexMethod/pom.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/utils/src/main/java/ar/edu/itba/Grid.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/utils/src/main/java/ar/edu/itba/Point.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/utils/src/main/java/ar/edu/itba/Molecule.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="21" selection-start-line="2" selection-start-column="21" selection-end-line="2" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/utils/src/main/java/ar/edu/itba/Parser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-647">
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cellIndexMethod/src/main/java/ar/edu/itba/Engine.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="172">
+          <caret line="22" column="22" selection-start-line="22" selection-start-column="22" selection-end-line="22" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/utils/src/main/java/ar/edu/itba/Property.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="15" selection-start-line="3" selection-start-column="15" selection-end-line="3" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/offLatice/src/main/java/ar/edu/itba/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="28" selection-start-line="28" selection-end-line="28" />
+          <folding>
+            <element signature="e#3650#3660#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cellIndexMethod/src/main/java/ar/edu/itba/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="112">
+          <caret line="12" column="52" selection-start-line="12" selection-start-column="52" selection-end-line="12" selection-end-column="52" />
+        </state>
+      </provider>
     </entry>
   </component>
   <component name="masterDetails">
