@@ -3,188 +3,108 @@ package ar.edu.itba;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
-import java.util.HashSet;
-import java.util.Map;
-import java.util.Random;
-import java.util.Set;
+import java.util.*;
 
 public class Main {
-    public static void main(String [ ] args){
-        //for(int iteration=1;iteration<=50;iteration++) {
-            //System.out.println("Iteration\t0.0\t0.5\t1.0\t1.5\t2.0\t2.5\t3.0\t3.5\t4.0\t4.5\t5.0\t");
-            //System.out.println();
-            //System.out.print(iteration+"\t");
-            //startSimulationForResults(20,1200,1.5);
-        //}
-        //startRandomSimulation(7,147,0.1,args[2]);
-        startSimulationWritingFiles(args[0],args[1],args[2]);
-        }
+    private static Double VELOCITY = 0.03;
+    private static Double NOISE = 0.1;
+    private static int DEGREES = 360;
+    private static Long SEED_POSITION = new Long(982347210);
+    private static Long SEED_ANGLE = new Long(237239823);
+    private static double ONE = 0.99;
 
-    private static void getNewMolecules(int L, double noise, Map<Particle, Set<Particle>> moleculesNeighbours, Set<Particle> newParticles) {
-        for (Particle m : moleculesNeighbours.keySet()) {
-            double newAngle = getAngleFromNeighbours(m, moleculesNeighbours.get(m), noise);
-            Point newLocation = getLocationFromAngle(m, newAngle, L);
-            Particle newParticle = new Particle(m.getId(), m.getRatio(), null, newLocation, m.getVelocity(), newAngle);
-            newParticles.add(newParticle);
-        }
+    public static void main(String[] args){
+        //Vamos a recibir un estatico y generar un dinamico y luego lo utilizamos para simular.
+        startSimulation(args[0], args[1], NOISE);
     }
 
-        public static void startSimulationForResults(int L, int N, double noise){
-        int M = L;
-        double Rc = 1;
-            Set<Particle> particles = randomMolecules(L,N);
-            Engine engine = new Engine(L, M, Rc, true, particles);
-            Map<Particle, Set<Particle>> moleculesNeighbours = engine.start();
-            final int maxT = 2000;
-            long start = System.currentTimeMillis();
-            double va = 0;
-            for (int i = 0; i < maxT ; i++) {
-                Set<Particle> newParticles = new HashSet<>();
-                getNewMolecules(L, noise, moleculesNeighbours, newParticles);
-                va = getVa(newParticles);
-                engine = new Engine(L, M, Rc, true, newParticles);
-                moleculesNeighbours = engine.start();
-            }
-                long end = System.currentTimeMillis();
-                System.out.println(new Double(va).toString().replace('.',',') + "\t");
-                //System.out.println(" time: " + (end - start) + "ms.");
+    private static Set<Particle> updateParticles(int L, double noise, Map<Particle, Set<Particle>> neighbours) {
+        Set<Particle> newParticles = new HashSet<>();
+        for (Particle m : neighbours.keySet()) {
+            double newAngle = getAngleFromNeighbours(m, neighbours.get(m), noise);
+            Point newLocation = getNewPosition(m, newAngle, L);
+            Particle newParticle = new Particle(m.getId(), m.getRadio(), newLocation, m.getVelocity(), newAngle);
+            newParticles.add(newParticle);
         }
+        return newParticles;
+    }
 
-
-    public static void startRandomSimulation(int L, int N, double noise,String outPath){
-        boolean done = false;
-        double va = 0;
-
-        int M = L;
-        double Rc = 1;
-        Set<Particle> particles = randomMolecules(L,N);
-        Engine engine = new Engine(L, M, Rc, true, particles);
-        Map<Particle, Set<Particle>> moleculesNeighbours = engine.start();
-        final int maxT = 2000;
-        long start = System.currentTimeMillis();
+    /*public static void startRandomSimulation(int L, int N, double noise, String outPath){
         for (int i = 0; i < maxT && !done; i++) {
             Set<Particle> newParticles = new HashSet<>();
             getNewMolecules(L, noise, moleculesNeighbours, newParticles);
-            va = getVa(newParticles);
-            engine = new Engine(L, M, Rc, true, newParticles);
-            moleculesNeighbours = engine.start();
+            va = calculateVa(newParticles);
+            processor = new Processor(L, M, Rc, true, newParticles);
+            moleculesNeighbours = processor.start();
 
-            String fileString = generateFileString(newParticles);
-            writeToFile(fileString, i, outPath);
-
+            String fileString = generateFileOffLattice(newParticles);
             if(va > 0.999) {
                 done = true;
             }
-
-
         }
         long end = System.currentTimeMillis();
         System.out.print(va + "\t");
         System.out.println(" time: " + (end - start) + "ms.");
-    }
+    }*/
 
-    public static Set<Particle> randomMolecules(int L, int N){
-        Random random= new Random();
-        Set<Particle> particles = new HashSet<Particle>();
-            for(int i=0; i<N; i++){
-                double x = random.nextDouble()*L;
-                double y = random.nextDouble()*L;
-                double velocity = 0.03;
-                double angle = random.nextDouble()*2*Math.PI;
-                particles.add(new Particle(i,0,null, new Point(x,y),velocity,angle));
-            }
-            return particles;
-        }
-
-    public static void startSimulationWritingFiles(String staticPath, String dynamicPath, String outPath) {
-        IO IO = new IO(staticPath, dynamicPath);
-
+    public static void startSimulation(String staticPath, String outPath, double noise) {
+        IO IO = new IO(staticPath);
         int L = IO.getL();
-        int N = IO.getN();
-        int M = IO.getM();
-        double Rc = IO.getRc();
-        boolean periodic = IO.isPeriodic();
-        double noise = 2;
+        Set<Particle> particles = IO.getCleanParticles();
 
-        Set<Particle> particles = IO.getParticles();
+        //Generamos el dinamico a partir de una semilla. Va a devolver siempre las mismas condiciones iniciales.
+        generateDinamic(particles, L);
 
-        Engine engine = new Engine(L, M, Rc, periodic, particles);
-        Map<Particle, Set<Particle>> moleculesNeighbours = engine.start();
+        Processor processor = new Processor(L, L, IO.getRc(), IO.isPeriodic(), particles);
+        Map<Particle, Set<Particle>> neighbors = processor.start();
 
-            final int maxT = 4000;
-            long start = System.currentTimeMillis();
-            boolean done = false;
-            double va = 0;
-            for (int i = 0; i < maxT && !done; i++) {
+        final int time = 5000;
+        long start = System.currentTimeMillis();
+        double va = 0;
+        StringBuilder builder = new StringBuilder();
+        IO.generateFileOffLattice(particles, builder);
 
-                Set<Particle> newParticles = new HashSet<>();
+        for(int i = 1; i < time && va < ONE; i++) {
+            //Particulas updeptiadas
+            Set<Particle> newParticles =  updateParticles(L, noise, neighbors);
+            va = calculateVa(newParticles);
 
-                getNewMolecules(L, noise, moleculesNeighbours, newParticles);
-                va = getVa(newParticles);
+            IO.generateFileOffLattice(newParticles, builder);
 
+            processor = new Processor(L, L, IO.getRc(), IO.isPeriodic(), newParticles);
+            neighbors = processor.start();
+        }
+        writeToFile(builder.toString(), outPath);
+        long end = System.currentTimeMillis();
+        System.out.println("time: " + (end - start) + "ms.");
+    }
 
-                engine = new Engine(L, M, Rc, periodic, newParticles);
-                moleculesNeighbours = engine.start();
-                String fileString = generateFileString(newParticles);
-                writeToFile(fileString, i, outPath);
+    private static void generateDinamic(Set<Particle> particles, double L) {
+        Random randomPosition = new Random(SEED_POSITION);
+        Random randomAngle = new Random(SEED_ANGLE);
 
-            if(va > 0.999) {
-                done = true;
-            }
-
-            long end = System.currentTimeMillis();
-            System.out.print(va + "\t");
-
-            System.out.println(" time: " + (end - start) + "ms.");
+        for(Particle particle : particles){
+            particle.setLocation(new Point(randomPosition.nextDouble() * L, randomPosition.nextDouble() * L));
+            particle.setAngle(randomAngle.nextDouble() * DEGREES);
+            particle.setVelocity(VELOCITY);
+            //System.out.println(particle.getId() + " " + particle.getLocation().getX() +  " " + particle.getLocation().getY()
+            //                   + " " + particle.getAngle());
         }
     }
 
-    public static String generateFileString(Set<Particle> allMolcules){
-
-        StringBuilder builder = new StringBuilder()
-                .append(allMolcules.size())
-                .append("\r\n")
-                .append("//ID\t X\t Y\t Radius\t R\t G\t B\t vx\t vy\t \r\n");
-        for(Particle current: allMolcules){
-            double vx = current.getVelocity()*Math.cos(current.getAngle());
-            double vy = current.getVelocity()*Math.sin(current.getAngle());
-            builder.append(current.getId())
-                    .append(" ")
-                    .append(current.getLocation().getX())
-                    .append(" ")
-                    .append(current.getLocation().getY())
-                    .append(" ")
-                    .append(current.getRatio())
-                    .append(" ")
-                    .append(getRGBDouble(current.getAngle()))
-                    .append(vx*1000)
-                    .append(" ")
-                    .append(vy*1000)
-                    .append(" ")
-                    .append(current.getAngle())
-                    .append("\r\n");
-
-
-        }
-        return builder.toString();
-    }
-
-    public static void writeToFile(String data, int inedx, String path){
+    public static void writeToFile(String data, String path){
         try {
-            Files.write(Paths.get(path + "/offLattice" + inedx + ".txt"), data.getBytes());
+            Files.write(Paths.get(path + "/offLattice" + ".xyz"), data.getBytes());
         } catch (IOException e) {
             e.printStackTrace();
         }
     }
 
-
-    private static Point getLocationFromAngle(Particle m, double newAngle, int L) {
-
+    private static Point getNewPosition(Particle m, double newAngle, int L) {
         double x = m.getLocation().getX()+m.getVelocity()*Math.cos(newAngle);
         double y = m.getLocation().getY()+m.getVelocity()*Math.sin(newAngle);
         x = x%L;
-        y= y%L;
-
+        y = y%L;
         if(y<0){
             y+=L;
         }
@@ -197,70 +117,24 @@ public class Main {
     private static double getAngleFromNeighbours(Particle m, Set<Particle> neighbours, double noise) {
         double sinTotal = Math.sin(m.getAngle());
         double cosTotal = Math.cos(m.getAngle());
-
         for(Particle n : neighbours) {
             sinTotal += Math.sin(n.getAngle());
             cosTotal += Math.cos(n.getAngle());
         }
         double n= new Random().nextDouble()*noise-noise/2;
         return Math.atan2(sinTotal/(neighbours.size() + 1), cosTotal/(neighbours.size() + 1) )+n;
-
     }
 
-
-
-
-    private static String getRGBDouble(double radius){
-        while(radius<0){
-            radius+=Math.PI*2;
-        }
-        double r,g,b;
-        if(radius <Math.PI/3){
-            r=1;
-            g=(radius/(Math.PI/3));
-            b=0;
-        }else if( radius < Math.PI*2/3){
-            r=1-((radius-Math.PI/3)/(Math.PI/3));
-            g=1;
-            b=0;
-        }else if(radius < Math.PI){
-            r=0;
-            g=1;
-            b=((radius-2*Math.PI/3)/(Math.PI/3));
-
-        }else if(radius< Math.PI*4/3){
-            r=0;
-            g=1-((radius-Math.PI)/(Math.PI/3));
-            b=255;
-        }else if(radius < Math.PI*5/3){
-            r=((radius-4*Math.PI/3)/(Math.PI/3));
-            g=0;
-            b=255;
-        }else if(radius<= Math.PI*2){
-            r=255;
-            g=0;
-            b=1-((radius-5*Math.PI/3)/(Math.PI/3));
-        }else {
-            r=1;
-            g=1;
-            b=1;
-        }
-        return r+" "+g+" "+b+" ";
-    }
-
-    private static double getVa (Set<Particle> particles) {
+    private static double calculateVa(Set<Particle> particles) {
         double totalVx = 0;
         double totalVy = 0;
-        double velocity = 0;
         for(Particle m : particles) {
-            totalVx += m.getVelocity()*Math.cos(m.getAngle());
-            totalVy += m.getVelocity()*Math.sin(m.getAngle());
-
-            velocity = m.getVelocity();
+            totalVx += m.getVelocity() * Math.cos(m.getAngle());
+            totalVy += m.getVelocity() * Math.sin(m.getAngle());
         }
         totalVx /= particles.size();
         totalVy /= particles.size();
         double totalVi = Math.sqrt(Math.pow(totalVx, 2) + Math.pow(totalVy, 2));
-        return totalVi / ( velocity);
+        return totalVi / (VELOCITY);
     }
 }

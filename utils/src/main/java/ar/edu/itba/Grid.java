@@ -23,14 +23,13 @@ public class Grid {
             }
         }
         for(Particle particle : particles){
-            Point j = getField(particle.getLocation());
+            Point cell = getField(particle.getLocation());
             try {
-                grid.get(j).add(particle);
+                grid.get(cell).add(particle);
             }catch (Exception e){
-                System.out.println(j + " " + particle);
+                System.out.println(cell + " " + particle);
             }
         }
-
     }
 
     private Point getField(Point location){
@@ -39,56 +38,56 @@ public class Grid {
         return new Point(x,y);
     }
 
-    public Set<Particle> getMoleculesInCell(int x , int y){
+    public Set<Particle> getParticlesInCell(int x , int y){
         if(x < 0){
             if(periodic) {
-                return getMoleculesInCell(x+m,y);
+                return getParticlesInCell(x + m, y);
             }else {
                 return Collections.EMPTY_SET;
             }
         } if(x >= m) {
             if(periodic) {
-                return getMoleculesInCell(x-m,y);
-            }else {
+                return getParticlesInCell(x - m, y);
+            } else {
                 return Collections.EMPTY_SET;
             }
         }
         if(y < 0) {
             if(periodic) {
-                return getMoleculesInCell(x,y+m);
-            }else {
+                return getParticlesInCell(x,y + m);
+            } else {
                 return Collections.EMPTY_SET;
             }
         }
         if(y >= m){
-            if(periodic){
-                return getMoleculesInCell(x,y-m);
-            }else{
+            if(periodic) {
+                return getParticlesInCell(x,y - m);
+            } else {
                 return Collections.EMPTY_SET;
             }
         }
         return grid.get(new Point(x,y));
     }
 
-    private Set<Particle> getNearMolecules(Point field){
+    private Set<Particle> getNearParticles(Point field){
         Set<Particle> nearParticles = new HashSet<>();
-        nearParticles.addAll(getMoleculesInCell((int)field.getX(),         (int) field.getY()));
-        nearParticles.addAll(getMoleculesInCell((int)field.getX()+1,    (int) field.getY()));
-        nearParticles.addAll(getMoleculesInCell((int)field.getX()+1, (int) field.getY()+1));
-        nearParticles.addAll(getMoleculesInCell((int)field.getX(),      (int) field.getY()+1));
-        nearParticles.addAll(getMoleculesInCell((int)field.getX()+1, (int) field.getY()-1));
+        nearParticles.addAll(getParticlesInCell((int)field.getX(),         (int) field.getY()));
+        nearParticles.addAll(getParticlesInCell((int)field.getX()+1,    (int) field.getY()));
+        nearParticles.addAll(getParticlesInCell((int)field.getX()+1, (int) field.getY()+1));
+        nearParticles.addAll(getParticlesInCell((int)field.getX(),      (int) field.getY()+1));
+        nearParticles.addAll(getParticlesInCell((int)field.getX()+1, (int) field.getY()-1));
         return nearParticles;
     }
 
-    public Set<Particle> getNeighborsOfMolecule(Particle particle, Set<Particle> analyzed, Set<Particle> nearParticles){
+    public Set<Particle> getParticleNeighbors(Particle particle, Set<Particle> analyzed, Set<Particle> nearParticles){
         final Point filed = getField(particle.getLocation());
-        //Set<Particle> nearParticles = getNearMolecules(filed);
+        //Set<Particle> nearParticles = getNearParticles(filed);
         //nearParticles.remove(particle);
         //nearParticles.removeAll(analyzed);
         Set<Particle> ans = new HashSet<>();
         for(Particle other : nearParticles){
             if(!other.equals(particle) && !analyzed.contains(other)) {
-                if(calculateDistanceBetweenMolecules(particle,other)){
+                if(calculateDistanceParticles(particle,other)){
                     ans.add(other);
                 }
             }
@@ -96,39 +95,39 @@ public class Grid {
         return ans;
     }
 
-    private boolean calculateDistanceBetweenMolecules(Particle particle, Particle other) {
-
-        if(Particle.distanceBetweenMolecules(particle,other)- particle.getRatio()-other.getRatio()<=rc) {
+    private boolean calculateDistanceParticles(Particle particle, Particle other) {
+        if(Particle.distanceBetweenParticles(particle,other) - particle.getRadio() - other.getRadio() <= rc) {
             return true;
         }
+
         if(!periodic){
             return false;
         }
-        double mx = particle.getLocation().getX();
-        double my = particle.getLocation().getY();
-        double ox = other.getLocation().getX();
-        double oy = other.getLocation().getY();
 
-        return Point.distanceBetween(new Point(mx,my+l), new Point(ox,oy)) - particle.getRatio() - other.getRatio() <= rc
-        || Point.distanceBetween(new Point(mx+l,my), new Point(ox,oy)) - particle.getRatio() - other.getRatio() <= rc
-        || Point.distanceBetween(new Point(mx+l,my+l), new Point(ox,oy)) - particle.getRatio() - other.getRatio() <= rc
-        || Point.distanceBetween(new Point(mx+l,my-l), new Point(ox,oy)) - particle.getRatio() - other.getRatio() <= rc
-        || Point.distanceBetween(new Point(mx,my-l), new Point(ox,oy)) - particle.getRatio() - other.getRatio() <= rc
-        || Point.distanceBetween(new Point(mx-l,my-l), new Point(ox,oy)) - particle.getRatio() - other.getRatio() <= rc
-        || Point.distanceBetween(new Point(mx-l,my), new Point(ox,oy)) - particle.getRatio() - other.getRatio() <= rc
-        || Point.distanceBetween(new Point(mx-l,my+l), new Point(ox,oy)) - particle.getRatio() - other.getRatio() <= rc;
+        double x1 = particle.getLocation().getX();
+        double y1 = particle.getLocation().getY();
+        double x2 = other.getLocation().getX();
+        double y2 = other.getLocation().getY();
+
+        return
+           Point.distanceBetween(new Point(x1,y1 + l),        new Point(x2,y2)) - particle.getRadio() - other.getRadio() <= rc
+        || Point.distanceBetween(new Point(x1 + l, y1),       new Point(x2,y2)) - particle.getRadio() - other.getRadio() <= rc
+        || Point.distanceBetween(new Point(x1 + l,y1 + l), new Point(x2,y2)) - particle.getRadio() - other.getRadio() <= rc
+        || Point.distanceBetween(new Point(x1 + l,y1 - l), new Point(x2,y2)) - particle.getRadio() - other.getRadio() <= rc
+        || Point.distanceBetween(new Point(x1,y1 - l),        new Point(x2,y2)) - particle.getRadio() - other.getRadio() <= rc
+        || Point.distanceBetween(new Point(x1 - l,y1 - l), new Point(x2,y2)) - particle.getRadio() - other.getRadio() <= rc
+        || Point.distanceBetween(new Point(x1 - l, y1),        new Point(x2,y2)) - particle.getRadio() - other.getRadio() <= rc
+        || Point.distanceBetween(new Point(x1 - l,y1 + l), new Point(x2,y2)) - particle.getRadio() - other.getRadio() <= rc;
     }
 
-    public Map<Particle,Set<Particle>> analyzeCell(Point cell){
+    public Map<Particle,Set<Particle>> processCell(Point cell){
         Set<Particle> particles = grid.get(cell);
-        Set<Particle> nearCellParticles = getNearMolecules(cell);
-
+        Set<Particle> nearCellParticles = getNearParticles(cell);
         Set<Particle> analyzed = new HashSet<>();
         Map<Particle,Set<Particle>> map = new HashMap<>();
 
         for(Particle particle : particles){
-            Set<Particle> neighbors = getNeighborsOfMolecule(particle,analyzed, nearCellParticles);
-
+            Set<Particle> neighbors = getParticleNeighbors(particle, analyzed, nearCellParticles);
             analyzed.add(particle);
             map.put(particle,neighbors);
         }

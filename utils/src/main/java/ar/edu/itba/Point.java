@@ -28,11 +28,11 @@ public class Point {
     }
 
     public double getModule(){
-        return Math.pow(Math.pow(getX(),2)+Math.pow(getY(),2),0.5);
+        return Math.pow(Math.pow(getX(),2) + Math.pow(getY(), 2), 0.5);
     }
 
     public static double distanceBetween(Point p1, Point p2){
-        return Math.pow(Math.pow(p1.getX()-p2.getX(),2)+Math.pow(p1.getY()-p2.getY(),2),0.5);
+        return Math.pow(Math.pow(p1.getX() - p2.getX(), 2) + Math.pow(p1.getY() - p2.getY(), 2), 0.5);
     }
 
     @Override
@@ -41,12 +41,11 @@ public class Point {
         if (o == null || getClass() != o.getClass()) return false;
         Point point = (Point) o;
         return Double.compare(point.getX(), getX()) == 0 &&
-                Double.compare(point.getY(), getY()) == 0;
+               Double.compare(point.getY(), getY()) == 0;
     }
 
     @Override
     public int hashCode() {
-
         return Objects.hash(getX(), getY());
     }
 

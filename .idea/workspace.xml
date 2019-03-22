@@ -3,12 +3,13 @@
   <component name="ChangeListManager">
     <list default="true" id="0b0d0e33-b037-41fd-8063-1aad5a488f1d" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cellIndexMethod/src/main/java/ar/edu/itba/Engine.java" beforeDir="false" afterPath="$PROJECT_DIR$/utils/src/main/java/ar/edu/itba/Engine.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cellIndexMethod/src/main/java/ar/edu/itba/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/cellIndexMethod/src/main/java/ar/edu/itba/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/offLatice/src/main/java/ar/edu/itba/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/offLatice/src/main/java/ar/edu/itba/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/src/main/java/ar/edu/itba/Engine.java" beforeDir="false" afterPath="$PROJECT_DIR$/utils/src/main/java/ar/edu/itba/Processor.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/utils/src/main/java/ar/edu/itba/Grid.java" beforeDir="false" afterPath="$PROJECT_DIR$/utils/src/main/java/ar/edu/itba/Grid.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/utils/src/main/java/ar/edu/itba/Molecule.java" beforeDir="false" afterPath="$PROJECT_DIR$/utils/src/main/java/ar/edu/itba/Molecule.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/utils/src/main/java/ar/edu/itba/Parser.java" beforeDir="false" afterPath="$PROJECT_DIR$/utils/src/main/java/ar/edu/itba/Parser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/src/main/java/ar/edu/itba/IO.java" beforeDir="false" afterPath="$PROJECT_DIR$/utils/src/main/java/ar/edu/itba/IO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/src/main/java/ar/edu/itba/Particle.java" beforeDir="false" afterPath="$PROJECT_DIR$/utils/src/main/java/ar/edu/itba/Particle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/src/main/java/ar/edu/itba/Point.java" beforeDir="false" afterPath="$PROJECT_DIR$/utils/src/main/java/ar/edu/itba/Point.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <ignored path="$PROJECT_DIR$/cellIndexMethod/target/" />
@@ -23,70 +24,71 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/utils/src/main/java/ar/edu/itba/Engine.java">
+        <entry file="file://$PROJECT_DIR$/offLatice/src/main/java/ar/edu/itba/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="507">
-              <caret line="88" column="68" lean-forward="true" selection-start-line="88" selection-start-column="68" selection-end-line="88" selection-end-column="68" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/utils/src/main/java/ar/edu/itba/Grid.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1575">
-              <caret line="105" column="9" selection-start-line="105" selection-start-column="9" selection-end-line="105" selection-end-column="9" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/utils/src/main/java/ar/edu/itba/Molecule.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="34" column="18" selection-start-line="34" selection-start-column="18" selection-end-line="34" selection-end-column="18" />
+            <state relative-caret-position="214">
+              <caret line="60" column="29" selection-start-line="60" selection-start-column="29" selection-end-line="60" selection-end-column="29" />
               <folding>
-                <element signature="method#Molecule#0;class#Molecule#0" />
-                <element signature="method#Molecule#1;class#Molecule#0" />
-                <element signature="e#959#960#0" expanded="true" />
-                <element signature="e#987#988#0" expanded="true" />
+                <element signature="method#generateDinamic#0;class#Main#0" />
+                <element signature="method#writeToFile#0;class#Main#0" />
+                <element signature="method#getNewPosition#0;class#Main#0" />
+                <element signature="method#getAngleFromNeighbours#0;class#Main#0" />
+                <element signature="method#getAveragVel#0;class#Main#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_162.jdk/Contents/Home/jre/lib/rt.jar!/sun/misc/FloatingDecimal.class">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="187">
+              <caret line="296" selection-start-line="296" selection-end-line="296" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/utils/src/main/java/ar/edu/itba/Particle.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="404">
+              <caret line="32" selection-start-line="32" selection-end-line="32" />
+              <folding>
+                <element signature="method#Particle#2;class#Particle#0" />
+                <element signature="method#distanceBetweenParticles#0;class#Particle#0" />
+                <element signature="method#toString#0;class#Particle#0" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/utils/src/main/java/ar/edu/itba/Parser.java">
+        <entry file="file://$PROJECT_DIR$/utils/src/main/java/ar/edu/itba/IO.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="331">
-              <caret line="33" column="32" selection-start-line="33" selection-start-column="32" selection-end-line="33" selection-end-column="32" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/offLatice/src/main/java/ar/edu/itba/Main.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1495">
-              <caret line="125" column="37" selection-start-line="125" selection-start-column="37" selection-end-line="125" selection-end-column="37" />
+            <state relative-caret-position="220">
+              <caret line="30" column="12" selection-start-line="30" selection-start-column="12" selection-end-line="30" selection-end-column="61" />
               <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#3650#3660#0" expanded="true" />
+                <element signature="e#480#566#0" />
+                <element signature="e#599#643#0" />
+                <element signature="method#getL#0;class#IO#0" />
+                <element signature="e#1484#1485#0" expanded="true" />
+                <element signature="e#1530#1531#0" expanded="true" />
+                <element signature="method#getParticles#0;class#IO#0" />
+                <element signature="method#RGBtoDouble#0;class#IO#0" />
+                <element signature="method#IO#1;class#IO#0" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/cellIndexMethod/src/main/java/ar/edu/itba/Main.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="7" column="7" selection-start-line="7" selection-start-column="7" selection-end-line="7" selection-end-column="7" />
-            </state>
-          </provider>
-        </entry>
-      </file>
     </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -99,13 +101,17 @@
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/cellIndexMethod/src/main/java/ar/edu/itba/Engine.java" />
         <option value="$PROJECT_DIR$/utils/src/main/java/ar/edu/itba/Property.java" />
+        <option value="$PROJECT_DIR$/utils/src/main/java/ar/edu/itba/Parser.java" />
         <option value="$PROJECT_DIR$/utils/src/main/java/ar/edu/itba/Molecule.java" />
-        <option value="$PROJECT_DIR$/offLatice/src/main/java/ar/edu/itba/Main.java" />
         <option value="$PROJECT_DIR$/utils/src/main/java/ar/edu/itba/Point.java" />
         <option value="$PROJECT_DIR$/utils/src/main/java/ar/edu/itba/Grid.java" />
+        <option value="$PROJECT_DIR$/cellIndexMethod/src/main/java/ar/edu/itba/Resoruces/GenerateFiles.java" />
+        <option value="$PROJECT_DIR$/utils/src/main/java/ar/edu/itba/FileGenerator.java" />
         <option value="$PROJECT_DIR$/utils/src/main/java/ar/edu/itba/Engine.java" />
         <option value="$PROJECT_DIR$/cellIndexMethod/src/main/java/ar/edu/itba/Main.java" />
-        <option value="$PROJECT_DIR$/utils/src/main/java/ar/edu/itba/Parser.java" />
+        <option value="$PROJECT_DIR$/utils/src/main/java/ar/edu/itba/IO.java" />
+        <option value="$PROJECT_DIR$/utils/src/main/java/ar/edu/itba/Particle.java" />
+        <option value="$PROJECT_DIR$/offLatice/src/main/java/ar/edu/itba/Main.java" />
       </list>
     </option>
   </component>
@@ -135,10 +141,9 @@
       <select />
     </treeState>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="y" value="23" />
+  <component name="ProjectFrameBounds" fullScreen="true">
     <option name="width" value="1440" />
-    <option name="height" value="821" />
+    <option name="height" value="900" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -146,8 +151,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -158,41 +163,6 @@
             <path>
               <item name="simulations" type="b2602c69:ProjectViewProjectNode" />
               <item name="simulations" type="462c0819:PsiDirectoryNode" />
-              <item name="cellIndexMethod" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="simulations" type="b2602c69:ProjectViewProjectNode" />
-              <item name="simulations" type="462c0819:PsiDirectoryNode" />
-              <item name="cellIndexMethod" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="simulations" type="b2602c69:ProjectViewProjectNode" />
-              <item name="simulations" type="462c0819:PsiDirectoryNode" />
-              <item name="cellIndexMethod" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="simulations" type="b2602c69:ProjectViewProjectNode" />
-              <item name="simulations" type="462c0819:PsiDirectoryNode" />
-              <item name="cellIndexMethod" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="simulations" type="b2602c69:ProjectViewProjectNode" />
-              <item name="simulations" type="462c0819:PsiDirectoryNode" />
-              <item name="cellIndexMethod" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="itba" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="simulations" type="b2602c69:ProjectViewProjectNode" />
-              <item name="simulations" type="462c0819:PsiDirectoryNode" />
               <item name="offLatice" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -224,6 +194,11 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="itba" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="simulations" type="b2602c69:ProjectViewProjectNode" />
+              <item name="simulations" type="462c0819:PsiDirectoryNode" />
+              <item name="Results" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="simulations" type="b2602c69:ProjectViewProjectNode" />
@@ -269,9 +244,12 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1553004094527" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1553267110941" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="preferences.sourceCode" />
   </component>
   <component name="RecentsManager">
@@ -292,6 +270,42 @@
       </list>
     </option>
   </component>
+  <component name="RunManager">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ar.edu.itba.Main" />
+      <module name="offLatice" />
+      <option name="PROGRAM_PARAMETERS" value="$USER_HOME$/Desktop/stat.txt Results " />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ar.edu.itba.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ar.edu.itba.Main" />
+      <module name="cellIndexMethod" />
+      <option name="PROGRAM_PARAMETERS" value="$USER_HOME$/Desktop/stat.txt $USER_HOME$/Desktop/din.txt Results " />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ar.edu.itba.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Main" />
+        <item itemvalue="Application.Main" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -303,18 +317,25 @@
       <option name="presentableId" value="Default" />
       <updated>1552929412757</updated>
       <workItem from="1552929414028" duration="882000" />
-      <workItem from="1552999372203" duration="3537000" />
+      <workItem from="1552999372203" duration="7090000" />
+      <workItem from="1553020568118" duration="3217000" />
+      <workItem from="1553089859487" duration="2479000" />
+      <workItem from="1553109656808" duration="2929000" />
+      <workItem from="1553177031512" duration="1000" />
+      <workItem from="1553194373090" duration="235000" />
+      <workItem from="1553256513226" duration="1846000" />
+      <workItem from="1553258946314" duration="7207000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="4419000" />
+    <option name="totallyTimeSpent" value="25886000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1440" height="821" extended-state="0" />
+    <frame x="0" y="0" width="1440" height="900" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19599427" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18311875" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -322,8 +343,8 @@
       <window_info id="Capture Tool" order="5" />
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32921812" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.32921812" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.5385542" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.2939759" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -333,7 +354,7 @@
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Terminal" order="10" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
-      <window_info anchor="bottom" id="Messages" order="12" weight="0.32921812" />
+      <window_info anchor="bottom" id="Messages" order="12" weight="0.32891566" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -344,9 +365,52 @@
       <window_info anchor="right" id="Capture Analysis" order="7" />
       <window_info anchor="right" id="Palette&#9;" order="8" />
     </layout>
+    <layout-to-restore>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18311875" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Image Layers" order="2" />
+      <window_info id="Designer" order="3" />
+      <window_info id="UI Designer" order="4" />
+      <window_info id="Capture Tool" order="5" />
+      <window_info id="Favorites" order="6" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.5385542" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.1" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Docker" order="7" />
+      <window_info anchor="bottom" id="Version Control" order="8" />
+      <window_info anchor="bottom" id="Database Changes" order="9" />
+      <window_info anchor="bottom" id="Terminal" order="10" />
+      <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
+      <window_info anchor="bottom" id="Messages" order="12" visible="true" weight="0.32891566" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="right" id="Database" order="4" />
+      <window_info anchor="right" id="Theme Preview" order="5" />
+      <window_info anchor="right" id="Maven" order="6" weight="0.3297568" />
+      <window_info anchor="right" id="Capture Analysis" order="7" />
+      <window_info anchor="right" id="Palette&#9;" order="8" />
+    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/utils/src/main/java/ar/edu/itba/Grid.java</url>
+          <line>41</line>
+          <properties />
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/utils/pom.xml">
@@ -355,33 +419,13 @@
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/offLatice/src/main/java/ar/edu/itba/Algorithm.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="22" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cellIndexMethod/src/main/java/ar/edu/itba/Algorithm.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="45" selection-start-line="7" selection-start-column="45" selection-end-line="7" selection-end-column="45" />
-          <folding>
-            <element signature="e#170#171#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/offLatice/src/main/java/ar/edu/itba/Algorithm.java" />
+    <entry file="file://$PROJECT_DIR$/cellIndexMethod/src/main/java/ar/edu/itba/Algorithm.java" />
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/offLatice/pom.xml">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cellIndexMethod/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-217" />
-      </provider>
     </entry>
     <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_162.jdk/Contents/Home/src.zip!/java/util/HashMap.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -390,25 +434,50 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/utils/src/main/java/ar/edu/itba/Engine.java">
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_162.jdk/Contents/Home/src.zip!/java/lang/NumberFormatException.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="507">
-          <caret line="88" column="68" lean-forward="true" selection-start-line="88" selection-start-column="68" selection-end-line="88" selection-end-column="68" />
+        <state relative-caret-position="397">
+          <caret line="64" selection-start-line="64" selection-end-line="64" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/utils/src/main/java/ar/edu/itba/Molecule.java">
+    <entry file="file://$PROJECT_DIR$/cellIndexMethod/src/main/java/ar/edu/itba/Resoruces/GenerateFiles.java" />
+    <entry file="file://$PROJECT_DIR$/results1000.txt" />
+    <entry file="file://$PROJECT_DIR$/results2.txt" />
+    <entry file="file://$PROJECT_DIR$/results3.txt" />
+    <entry file="file://$PROJECT_DIR$/Results/results109.txt" />
+    <entry file="file://$PROJECT_DIR$/Results/results110.txt" />
+    <entry file="file://$PROJECT_DIR$/utils/src/main/java/ar/edu/itba/FileGenerator.java" />
+    <entry file="file://$PROJECT_DIR$/utils/src/main/java/ar/edu/itba/Point.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="34" column="18" selection-start-line="34" selection-start-column="18" selection-end-line="34" selection-end-column="18" />
+        <state relative-caret-position="300">
+          <caret line="33" column="25" selection-start-line="33" selection-start-column="25" selection-end-line="33" selection-end-column="25" />
           <folding>
-            <element signature="method#Molecule#0;class#Molecule#0" />
-            <element signature="method#Molecule#1;class#Molecule#0" />
-            <element signature="e#959#960#0" expanded="true" />
-            <element signature="e#987#988#0" expanded="true" />
+            <element signature="method#Point#0;class#Point#0" />
+            <element signature="method#distanceBetween#0;class#Point#0" />
+            <element signature="method#equals#0;class#Point#0" />
+            <element signature="method#toString#0;class#Point#0" />
           </folding>
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cellIndexMethod/pom.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/utils/src/main/java/ar/edu/itba/Grid.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="453">
+          <caret line="122" column="39" selection-start-line="122" selection-start-column="39" selection-end-line="122" selection-end-column="39" />
+          <folding>
+            <element signature="method#Grid#0;class#Grid#0" />
+            <element signature="method#getField#0;class#Grid#0" />
+            <element signature="method#getParticlesInCell#0;class#Grid#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Results/offLattice0.txt">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/utils/src/main/java/ar/edu/itba/Property.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -417,55 +486,167 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/utils/src/main/java/ar/edu/itba/Point.java">
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_162.jdk/Contents/Home/src.zip!/java/util/Random.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="525">
-          <caret line="51" selection-start-line="51" selection-end-line="51" />
-          <folding>
-            <element signature="method#equals#0;class#Point#0" />
-            <element signature="method#toString#0;class#Point#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/utils/src/main/java/ar/edu/itba/Grid.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1575">
-          <caret line="105" column="9" selection-start-line="105" selection-start-column="9" selection-end-line="105" selection-end-column="9" />
+        <state relative-caret-position="284">
+          <caret line="134" column="11" selection-start-line="134" selection-start-column="11" selection-end-line="134" selection-end-column="11" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/cellIndexMethod/src/main/java/ar/edu/itba/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="7" column="7" selection-start-line="7" selection-start-column="7" selection-end-line="7" selection-end-column="7" />
+        <state relative-caret-position="30">
+          <caret line="4" selection-start-line="4" selection-end-line="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/utils/src/main/java/ar/edu/itba/Processor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="13" column="11" selection-start-line="13" selection-start-column="11" selection-end-line="13" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Results/offLattice.xyz">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-27613" />
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_162.jdk/Contents/Home/jre/lib/rt.jar!/sun/nio/fs/UnixException.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="53" selection-start-line="53" selection-end-line="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/utils/src/main/java/ar/edu/itba/Particle.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="404">
+          <caret line="32" selection-start-line="32" selection-end-line="32" />
+          <folding>
+            <element signature="method#Particle#2;class#Particle#0" />
+            <element signature="method#distanceBetweenParticles#0;class#Particle#0" />
+            <element signature="method#toString#0;class#Particle#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_162.jdk/Contents/Home/jre/lib/rt.jar!/sun/misc/FloatingDecimal.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="296" selection-start-line="296" selection-end-line="296" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/offLatice/src/main/java/ar/edu/itba/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1495">
-          <caret line="125" column="37" selection-start-line="125" selection-start-column="37" selection-end-line="125" selection-end-column="37" />
+        <state relative-caret-position="214">
+          <caret line="60" column="29" selection-start-line="60" selection-start-column="29" selection-end-line="60" selection-end-column="29" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#3650#3660#0" expanded="true" />
+            <element signature="method#generateDinamic#0;class#Main#0" />
+            <element signature="method#writeToFile#0;class#Main#0" />
+            <element signature="method#getNewPosition#0;class#Main#0" />
+            <element signature="method#getAngleFromNeighbours#0;class#Main#0" />
+            <element signature="method#getAveragVel#0;class#Main#0" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/utils/src/main/java/ar/edu/itba/Parser.java">
+    <entry file="file://$PROJECT_DIR$/utils/src/main/java/ar/edu/itba/IO.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="331">
-          <caret line="33" column="32" selection-start-line="33" selection-start-column="32" selection-end-line="33" selection-end-column="32" />
+        <state relative-caret-position="220">
+          <caret line="30" column="12" selection-start-line="30" selection-start-column="12" selection-end-line="30" selection-end-column="61" />
+          <folding>
+            <element signature="e#480#566#0" />
+            <element signature="e#599#643#0" />
+            <element signature="method#getL#0;class#IO#0" />
+            <element signature="e#1484#1485#0" expanded="true" />
+            <element signature="e#1530#1531#0" expanded="true" />
+            <element signature="method#getParticles#0;class#IO#0" />
+            <element signature="method#RGBtoDouble#0;class#IO#0" />
+            <element signature="method#IO#1;class#IO#0" />
+          </folding>
         </state>
       </provider>
     </entry>
   </component>
   <component name="masterDetails">
     <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <last-edited>No facets are configured</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>utils</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+                <option value="0.6" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
       <state key="ProjectJDKs.UI">
         <settings>
           <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <last-edited>Maven: junit:junit:4.11</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>

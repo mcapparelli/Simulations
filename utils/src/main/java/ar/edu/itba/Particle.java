@@ -2,26 +2,47 @@ package ar.edu.itba;
 
 public class Particle {
     private static int quantity = 0;
+
     private int id;
-    private double ratio;
+
+    private double radio;
     private Property<String> property;
     private Point location;
     private double velocity;
     private double angle;
 
-    public Particle(double ratio, Property<String> property, Point location, double velocity, double angle) {
+    public Particle(double radio, Property<String> property, Point location, double velocity, double angle) {
         quantity++;
         this.id = quantity;
-        this.ratio = ratio;
+        this.radio = radio;
         this.property = property;
         this.location = location;
         this.velocity = velocity;
         this.angle = angle;
     }
 
-    public Particle(int id, double ratio, Property<String> property, Point location, double velocity, double angle) {
+    public Particle(double radio, Point location, double velocity, double angle) {
+        quantity++;
+        this.id = quantity;
+        this.radio = radio;
+        this.property = null;
+        this.location = location;
+        this.velocity = velocity;
+        this.angle = angle;
+    }
+
+    public Particle(int id, double radio, Point location, double velocity, double angle) {
         this.id = id;
-        this.ratio = ratio;
+        this.radio = radio;
+        this.property = null;
+        this.location = location;
+        this.velocity = velocity;
+        this.angle = angle;
+    }
+
+    public Particle(int id, double radio, Property<String> property, Point location, double velocity, double angle) {
+        this.id = id;
+        this.radio = radio;
         this.property = property;
         this.location = location;
         this.velocity = velocity;
@@ -32,15 +53,31 @@ public class Particle {
         return id;
     }
 
-    public double getRatio() {
-        return ratio;
+    public double getRadio() {
+        return radio;
     }
 
     public Point getLocation() {
         return location;
     }
 
-    public static double distanceBetweenMolecules(Particle m1, Particle m2){
+    public void setRadio(double radio) {
+        this.radio = radio;
+    }
+
+    public void setLocation(Point location) {
+        this.location = location;
+    }
+
+    public void setVelocity(double velocity) {
+        this.velocity = velocity;
+    }
+
+    public void setAngle(double angle) {
+        this.angle = angle;
+    }
+
+    public static double distanceBetweenParticles(Particle m1, Particle m2){
         return Point.distanceBetween(m1.location,m2.location);
     }
 
@@ -56,7 +93,7 @@ public class Particle {
     public String toString() {
         return "Particle{" +
                 "id=" + id +
-                ", ratio=" + ratio +
+                ", radio=" + radio +
                 ", property=" + property +
                 ", location=" + location +
                 ", velocity=" + velocity +
