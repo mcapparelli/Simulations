@@ -58,23 +58,31 @@ public class Main {
         Processor processor = new Processor(L, L, IO.getRc(), IO.isPeriodic(), particles);
         Map<Particle, Set<Particle>> neighbors = processor.start();
 
-        final int time = 5000;
+        final int time = 40;
         long start = System.currentTimeMillis();
         double va = 0;
-        StringBuilder builder = new StringBuilder();
-        IO.generateFileOffLattice(particles, builder);
 
-        for(int i = 1; i < time && va < ONE; i++) {
+        StringBuilder builder = new StringBuilder();
+        StringBuilder builderTimeVa = new StringBuilder();
+
+        IO.generateFileOffLattice(particles, builder);
+        IO.generateFileTimeVa(time,va,builderTimeVa);
+
+        //la condicion de corte no es va = 1 siempre.
+        for(int i = 1; i < time; i++) {
             //Particulas updeptiadas
             Set<Particle> newParticles =  updateParticles(L, noise, neighbors);
             va = calculateVa(newParticles);
 
             IO.generateFileOffLattice(newParticles, builder);
+            builderTimeVa.append(i + "\t" + va + "\r\n");
 
             processor = new Processor(L, L, IO.getRc(), IO.isPeriodic(), newParticles);
             neighbors = processor.start();
         }
-        writeToFile(builder.toString(), outPath);
+        writeToFile("offLattice", builder.toString(), outPath);
+        writeToFile("timeVa", builderTimeVa.toString(), outPath);
+
         long end = System.currentTimeMillis();
         System.out.println("time: " + (end - start) + "ms.");
     }
@@ -92,9 +100,9 @@ public class Main {
         }
     }
 
-    public static void writeToFile(String data, String path){
+    public static void writeToFile(String name, String data, String path){
         try {
-            Files.write(Paths.get(path + "/offLattice" + ".xyz"), data.getBytes());
+            Files.write(Paths.get(path + "/" + name + ".xyz"), data.getBytes());
         } catch (IOException e) {
             e.printStackTrace();
         }

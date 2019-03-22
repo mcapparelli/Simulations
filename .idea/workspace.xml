@@ -2,14 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0b0d0e33-b037-41fd-8063-1aad5a488f1d" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cellIndexMethod/src/main/java/ar/edu/itba/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/cellIndexMethod/src/main/java/ar/edu/itba/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/offLatice/src/main/java/ar/edu/itba/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/offLatice/src/main/java/ar/edu/itba/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/utils/src/main/java/ar/edu/itba/Engine.java" beforeDir="false" afterPath="$PROJECT_DIR$/utils/src/main/java/ar/edu/itba/Processor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/utils/src/main/java/ar/edu/itba/Grid.java" beforeDir="false" afterPath="$PROJECT_DIR$/utils/src/main/java/ar/edu/itba/Grid.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/utils/src/main/java/ar/edu/itba/IO.java" beforeDir="false" afterPath="$PROJECT_DIR$/utils/src/main/java/ar/edu/itba/IO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/utils/src/main/java/ar/edu/itba/Particle.java" beforeDir="false" afterPath="$PROJECT_DIR$/utils/src/main/java/ar/edu/itba/Particle.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/utils/src/main/java/ar/edu/itba/Point.java" beforeDir="false" afterPath="$PROJECT_DIR$/utils/src/main/java/ar/edu/itba/Point.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <ignored path="$PROJECT_DIR$/cellIndexMethod/target/" />
@@ -23,11 +17,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/offLatice/src/main/java/ar/edu/itba/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="214">
-              <caret line="60" column="29" selection-start-line="60" selection-start-column="29" selection-end-line="60" selection-end-column="29" />
+            <state relative-caret-position="469">
+              <caret line="84" column="8" selection-start-line="84" selection-start-column="8" selection-end-line="84" selection-end-column="8" />
               <folding>
                 <element signature="method#generateDinamic#0;class#Main#0" />
                 <element signature="method#writeToFile#0;class#Main#0" />
@@ -35,15 +29,6 @@
                 <element signature="method#getAngleFromNeighbours#0;class#Main#0" />
                 <element signature="method#getAveragVel#0;class#Main#0" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_162.jdk/Contents/Home/jre/lib/rt.jar!/sun/misc/FloatingDecimal.class">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="296" selection-start-line="296" selection-end-line="296" />
             </state>
           </provider>
         </entry>
@@ -62,11 +47,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/utils/src/main/java/ar/edu/itba/IO.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="220">
-              <caret line="30" column="12" selection-start-line="30" selection-start-column="12" selection-end-line="30" selection-end-column="61" />
+            <state relative-caret-position="179">
+              <caret line="153" column="36" selection-start-line="153" selection-start-column="36" selection-end-line="153" selection-end-column="36" />
               <folding>
                 <element signature="e#480#566#0" />
                 <element signature="e#599#643#0" />
@@ -109,8 +94,8 @@
         <option value="$PROJECT_DIR$/utils/src/main/java/ar/edu/itba/FileGenerator.java" />
         <option value="$PROJECT_DIR$/utils/src/main/java/ar/edu/itba/Engine.java" />
         <option value="$PROJECT_DIR$/cellIndexMethod/src/main/java/ar/edu/itba/Main.java" />
-        <option value="$PROJECT_DIR$/utils/src/main/java/ar/edu/itba/IO.java" />
         <option value="$PROJECT_DIR$/utils/src/main/java/ar/edu/itba/Particle.java" />
+        <option value="$PROJECT_DIR$/utils/src/main/java/ar/edu/itba/IO.java" />
         <option value="$PROJECT_DIR$/offLatice/src/main/java/ar/edu/itba/Main.java" />
       </list>
     </option>
@@ -244,7 +229,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1553267110941" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1553267807258" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Modules" />
@@ -324,12 +309,12 @@
       <workItem from="1553177031512" duration="1000" />
       <workItem from="1553194373090" duration="235000" />
       <workItem from="1553256513226" duration="1846000" />
-      <workItem from="1553258946314" duration="7207000" />
+      <workItem from="1553258946314" duration="7654000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="25886000" />
+    <option name="totallyTimeSpent" value="26333000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
@@ -538,24 +523,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/offLatice/src/main/java/ar/edu/itba/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="214">
-          <caret line="60" column="29" selection-start-line="60" selection-start-column="29" selection-end-line="60" selection-end-column="29" />
-          <folding>
-            <element signature="method#generateDinamic#0;class#Main#0" />
-            <element signature="method#writeToFile#0;class#Main#0" />
-            <element signature="method#getNewPosition#0;class#Main#0" />
-            <element signature="method#getAngleFromNeighbours#0;class#Main#0" />
-            <element signature="method#getAveragVel#0;class#Main#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/utils/src/main/java/ar/edu/itba/IO.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="30" column="12" selection-start-line="30" selection-start-column="12" selection-end-line="30" selection-end-column="61" />
+        <state relative-caret-position="179">
+          <caret line="153" column="36" selection-start-line="153" selection-start-column="36" selection-end-line="153" selection-end-column="36" />
           <folding>
             <element signature="e#480#566#0" />
             <element signature="e#599#643#0" />
@@ -565,6 +536,20 @@
             <element signature="method#getParticles#0;class#IO#0" />
             <element signature="method#RGBtoDouble#0;class#IO#0" />
             <element signature="method#IO#1;class#IO#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/offLatice/src/main/java/ar/edu/itba/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="469">
+          <caret line="84" column="8" selection-start-line="84" selection-start-column="8" selection-end-line="84" selection-end-column="8" />
+          <folding>
+            <element signature="method#generateDinamic#0;class#Main#0" />
+            <element signature="method#writeToFile#0;class#Main#0" />
+            <element signature="method#getNewPosition#0;class#Main#0" />
+            <element signature="method#getAngleFromNeighbours#0;class#Main#0" />
+            <element signature="method#getAveragVel#0;class#Main#0" />
           </folding>
         </state>
       </provider>

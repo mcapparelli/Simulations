@@ -149,6 +149,12 @@ public class IO {
         return builder;
     }
 
+    public static StringBuilder generateFileTimeVa(int time, double va, StringBuilder builder){
+        builder.append("\r\n")
+               .append("T\tVa\r\n");
+        return builder;
+    }
+
     public static String generateFileString(Particle particle, Set<Particle> neighbours, Set<Particle> allParticles){
         StringBuilder builder = new StringBuilder()
                 .append(allParticles.size())
