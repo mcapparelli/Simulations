@@ -1,6 +1,8 @@
 package ar.edu.itba;
 
 import java.io.*;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 import java.util.*;
 
 public class IO {
@@ -206,5 +208,14 @@ public class IO {
             e.printStackTrace();
         }
         //System.out.println("N:"+n+" L:"+l+" m:"+m+" rc:"+rc);
+    }
+
+
+    public static void writeToFileOffLattice(String name, String data, String path){
+        try {
+            Files.write(Paths.get(path + "/" + name + ".xyz"), data.getBytes());
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 }

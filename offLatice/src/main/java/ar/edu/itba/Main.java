@@ -1,17 +1,15 @@
 package ar.edu.itba;
 
-import java.io.IOException;
-import java.nio.file.Files;
-import java.nio.file.Paths;
 import java.util.*;
+
+import static ar.edu.itba.IO.writeToFileOffLattice;
 
 public class Main {
     private static Double VELOCITY = 0.03;
-    private static Double NOISE = 0.1;
+    private static Double NOISE = 4.5;
     private static int DEGREES = 360;
     private static Long SEED_POSITION = new Long(982347210);
     private static Long SEED_ANGLE = new Long(237239823);
-    private static double ONE = 0.99;
 
     public static void main(String[] args){
         //Vamos a recibir un estatico y generar un dinamico y luego lo utilizamos para simular.
@@ -29,24 +27,6 @@ public class Main {
         return newParticles;
     }
 
-    /*public static void startRandomSimulation(int L, int N, double noise, String outPath){
-        for (int i = 0; i < maxT && !done; i++) {
-            Set<Particle> newParticles = new HashSet<>();
-            getNewMolecules(L, noise, moleculesNeighbours, newParticles);
-            va = calculateVa(newParticles);
-            processor = new Processor(L, M, Rc, true, newParticles);
-            moleculesNeighbours = processor.start();
-
-            String fileString = generateFileOffLattice(newParticles);
-            if(va > 0.999) {
-                done = true;
-            }
-        }
-        long end = System.currentTimeMillis();
-        System.out.print(va + "\t");
-        System.out.println(" time: " + (end - start) + "ms.");
-    }*/
-
     public static void startSimulation(String staticPath, String outPath, double noise) {
         IO IO = new IO(staticPath);
         int L = IO.getL();
@@ -58,7 +38,7 @@ public class Main {
         Processor processor = new Processor(L, L, IO.getRc(), IO.isPeriodic(), particles);
         Map<Particle, Set<Particle>> neighbors = processor.start();
 
-        final int time = 40;
+        final int time = 2000;
         long start = System.currentTimeMillis();
         double va = 0;
 
@@ -80,8 +60,8 @@ public class Main {
             processor = new Processor(L, L, IO.getRc(), IO.isPeriodic(), newParticles);
             neighbors = processor.start();
         }
-        writeToFile("offLattice", builder.toString(), outPath);
-        writeToFile("timeVa", builderTimeVa.toString(), outPath);
+        writeToFileOffLattice("offLatticeRuido:" + NOISE + "N:" + IO.getN(), builder.toString(), outPath);
+        writeToFileOffLattice("timeVaRuido:" + NOISE + "N:" + IO.getN(), builderTimeVa.toString(), outPath);
 
         long end = System.currentTimeMillis();
         System.out.println("time: " + (end - start) + "ms.");
@@ -97,14 +77,6 @@ public class Main {
             particle.setVelocity(VELOCITY);
             //System.out.println(particle.getId() + " " + particle.getLocation().getX() +  " " + particle.getLocation().getY()
             //                   + " " + particle.getAngle());
-        }
-    }
-
-    public static void writeToFile(String name, String data, String path){
-        try {
-            Files.write(Paths.get(path + "/" + name + ".xyz"), data.getBytes());
-        } catch (IOException e) {
-            e.printStackTrace();
         }
     }
 
