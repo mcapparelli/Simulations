@@ -4,10 +4,9 @@ public class Particle {
     private static int quantity = 0;
 
     private int id;
-
     private double radio;
-    private Property<String> property;
     private Point location;
+    private Property<String> property;
     private double velocity;
     private double angle;
 

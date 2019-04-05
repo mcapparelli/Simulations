@@ -10,5 +10,6 @@
     <module>cellIndexMethod</module>
       <module>offLatice</module>
       <module>utils</module>
+      <module>brownianMovement</module>
   </modules>
 </project>

@@ -2,35 +2,28 @@ package ar.edu.itba;
 
 import java.util.*;
 
-import static ar.edu.itba.IO.writeToFileOffLattice;
+import static ar.edu.itba.IO.*;
 
 public class Main {
     private static Double VELOCITY = 0.03;
-    private static Double NOISE = 4.5;
+    private static Double NOISE = 0.7;
     private static int DEGREES = 360;
     private static Long SEED_POSITION = new Long(982347210);
     private static Long SEED_ANGLE = new Long(237239823);
 
     public static void main(String[] args){
         //Vamos a recibir un estatico y generar un dinamico y luego lo utilizamos para simular.
+        //for(int i = 1; i <= 10; i++)
+        //    startSimulation(args[0], args[1], NOISE * i);
         startSimulation(args[0], args[1], NOISE);
-    }
-
-    private static Set<Particle> updateParticles(int L, double noise, Map<Particle, Set<Particle>> neighbours) {
-        Set<Particle> newParticles = new HashSet<>();
-        for (Particle m : neighbours.keySet()) {
-            double newAngle = getAngleFromNeighbours(m, neighbours.get(m), noise);
-            Point newLocation = getNewPosition(m, newAngle, L);
-            Particle newParticle = new Particle(m.getId(), m.getRadio(), newLocation, m.getVelocity(), newAngle);
-            newParticles.add(newParticle);
-        }
-        return newParticles;
     }
 
     public static void startSimulation(String staticPath, String outPath, double noise) {
         IO IO = new IO(staticPath);
         int L = IO.getL();
         Set<Particle> particles = IO.getCleanParticles();
+        Double density;
+
 
         //Generamos el dinamico a partir de una semilla. Va a devolver siempre las mismas condiciones iniciales.
         generateDinamic(particles, L);
@@ -38,7 +31,7 @@ public class Main {
         Processor processor = new Processor(L, L, IO.getRc(), IO.isPeriodic(), particles);
         Map<Particle, Set<Particle>> neighbors = processor.start();
 
-        final int time = 2000;
+        final int time = 1000;
         long start = System.currentTimeMillis();
         double va = 0;
 
@@ -60,11 +53,23 @@ public class Main {
             processor = new Processor(L, L, IO.getRc(), IO.isPeriodic(), newParticles);
             neighbors = processor.start();
         }
-        writeToFileOffLattice("offLatticeRuido:" + NOISE + "N:" + IO.getN(), builder.toString(), outPath);
-        writeToFileOffLattice("timeVaRuido:" + NOISE + "N:" + IO.getN(), builderTimeVa.toString(), outPath);
+        density = (Double.valueOf(particles.size()) / (L * L));
+        writeToFileOffLatticeXYZ("offLatticeRuido:" + noise + "N:" + IO.getN() + "Density:" + density, builder.toString(), outPath);
+        writeToFileOffLatticeTXT("timeVaRuido:" + noise + "N:" + IO.getN() + "Density:" + density, builderTimeVa.toString(), outPath);
 
         long end = System.currentTimeMillis();
         System.out.println("time: " + (end - start) + "ms.");
+    }
+
+    private static Set<Particle> updateParticles(int L, double noise, Map<Particle, Set<Particle>> neighbours) {
+        Set<Particle> newParticles = new HashSet<>();
+        for (Particle m : neighbours.keySet()) {
+            double newAngle = getAngleFromNeighbours(m, neighbours.get(m), noise);
+            Point newLocation = getNewPosition(m, newAngle, L);
+            Particle newParticle = new Particle(m.getId(), m.getRadio(), newLocation, m.getVelocity(), newAngle);
+            newParticles.add(newParticle);
+        }
+        return newParticles;
     }
 
     private static void generateDinamic(Set<Particle> particles, double L) {

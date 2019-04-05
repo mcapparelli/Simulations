@@ -2,16 +2,23 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0b0d0e33-b037-41fd-8063-1aad5a488f1d" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/brownianMovement/brownianMovement.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/brownianMovement/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/brownianMovement/src/main/java/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/src/main/java/ar/edu/itba/ParticleWithMass.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Results/offLattice.xyz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Results/timeVa.xyz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/graficos/charts.csv" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/offLatice/src/main/java/ar/edu/itba/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/offLatice/src/main/java/ar/edu/itba/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/utils/src/main/java/ar/edu/itba/IO.java" beforeDir="false" afterPath="$PROJECT_DIR$/utils/src/main/java/ar/edu/itba/IO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/src/main/java/ar/edu/itba/Particle.java" beforeDir="false" afterPath="$PROJECT_DIR$/utils/src/main/java/ar/edu/itba/Particle.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <ignored path="$PROJECT_DIR$/cellIndexMethod/target/" />
     <ignored path="$PROJECT_DIR$/offLatice/target/" />
     <ignored path="$PROJECT_DIR$/utils/target/" />
+    <ignored path="$PROJECT_DIR$/brownianMovement/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,27 +27,23 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/offLatice/src/main/java/ar/edu/itba/Main.java">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/brownianMovement/src/main/java/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-409">
-              <caret line="8" column="37" selection-start-line="8" selection-start-column="37" selection-end-line="8" selection-end-column="37" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="method#generateDinamic#0;class#Main#0" />
-              </folding>
+            <state relative-caret-position="15">
+              <caret line="1" selection-start-line="1" selection-end-line="1" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/utils/src/main/java/ar/edu/itba/Particle.java">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/utils/src/main/java/ar/edu/itba/ParticleWithMass.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="174">
-              <caret line="32" selection-start-line="32" selection-end-line="32" />
+            <state relative-caret-position="513">
+              <caret line="105" column="80" selection-start-line="105" selection-start-column="80" selection-end-line="105" selection-end-column="80" />
               <folding>
-                <element signature="method#Particle#2;class#Particle#0" />
-                <element signature="method#distanceBetweenParticles#0;class#Particle#0" />
+                <element signature="imports" expanded="true" />
+                <element signature="method#equals#0;class#Particle#0" />
                 <element signature="method#toString#0;class#Particle#0" />
               </folding>
             </state>
@@ -48,12 +51,26 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/utils/src/main/java/ar/edu/itba/Processor.java">
+        <entry file="file://$PROJECT_DIR$/brownianMovement/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-846">
-              <caret line="13" column="11" selection-start-line="13" selection-start-column="11" selection-end-line="13" selection-end-column="11" />
+            <state relative-caret-position="165">
+              <caret line="11" column="45" selection-start-line="11" selection-start-column="45" selection-end-line="11" selection-end-column="45" />
             </state>
           </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$USER_HOME$/Downloads/SimulacionDeSistemas-master/EventDrivenMolecularDynamics/src/main/java/ar/edu/itba/ss/Simulation.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="156">
+              <caret line="28" selection-start-line="28" selection-end-line="28" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$USER_HOME$/Downloads/SimulacionDeSistemas-master/EventDrivenMolecularDynamics/src/main/java/ar/edu/itba/ss/WallCollision.java">
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
     </leaf>
@@ -79,14 +96,19 @@
         <option value="$PROJECT_DIR$/utils/src/main/java/ar/edu/itba/Parser.java" />
         <option value="$PROJECT_DIR$/utils/src/main/java/ar/edu/itba/Molecule.java" />
         <option value="$PROJECT_DIR$/utils/src/main/java/ar/edu/itba/Point.java" />
-        <option value="$PROJECT_DIR$/utils/src/main/java/ar/edu/itba/Grid.java" />
         <option value="$PROJECT_DIR$/cellIndexMethod/src/main/java/ar/edu/itba/Resoruces/GenerateFiles.java" />
         <option value="$PROJECT_DIR$/utils/src/main/java/ar/edu/itba/FileGenerator.java" />
         <option value="$PROJECT_DIR$/utils/src/main/java/ar/edu/itba/Engine.java" />
         <option value="$PROJECT_DIR$/cellIndexMethod/src/main/java/ar/edu/itba/Main.java" />
-        <option value="$PROJECT_DIR$/utils/src/main/java/ar/edu/itba/Particle.java" />
+        <option value="$PROJECT_DIR$/utils/src/main/java/ar/edu/itba/Grid.java" />
+        <option value="$PROJECT_DIR$/utils/src/main/java/ar/edu/itba/Processor.java" />
         <option value="$PROJECT_DIR$/utils/src/main/java/ar/edu/itba/IO.java" />
+        <option value="$PROJECT_DIR$/utils/src/main/java/ar/edu/itba/Particle.java" />
         <option value="$PROJECT_DIR$/offLatice/src/main/java/ar/edu/itba/Main.java" />
+        <option value="$PROJECT_DIR$/brownianMovement/src/main/java/Main.java" />
+        <option value="$PROJECT_DIR$/brownianMovement/src/main/java/Particle.java" />
+        <option value="$PROJECT_DIR$/brownianMovement/pom.xml" />
+        <option value="$PROJECT_DIR$/utils/src/main/java/ar/edu/itba/ParticleWithMass.java" />
       </list>
     </option>
   </component>
@@ -116,10 +138,11 @@
       <select />
     </treeState>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="y" value="23" />
+  <component name="ProjectFrameBounds" fullScreen="true">
+    <option name="x" value="348" />
+    <option name="y" value="27" />
     <option name="width" value="1440" />
-    <option name="height" value="821" />
+    <option name="height" value="812" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -127,6 +150,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -137,37 +161,33 @@
             <path>
               <item name="simulations" type="b2602c69:ProjectViewProjectNode" />
               <item name="simulations" type="462c0819:PsiDirectoryNode" />
-              <item name="offLatice" type="462c0819:PsiDirectoryNode" />
+              <item name="brownianMovement" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="simulations" type="b2602c69:ProjectViewProjectNode" />
               <item name="simulations" type="462c0819:PsiDirectoryNode" />
-              <item name="offLatice" type="462c0819:PsiDirectoryNode" />
+              <item name="brownianMovement" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="simulations" type="b2602c69:ProjectViewProjectNode" />
               <item name="simulations" type="462c0819:PsiDirectoryNode" />
-              <item name="offLatice" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="simulations" type="b2602c69:ProjectViewProjectNode" />
-              <item name="simulations" type="462c0819:PsiDirectoryNode" />
-              <item name="offLatice" type="462c0819:PsiDirectoryNode" />
+              <item name="brownianMovement" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="simulations" type="b2602c69:ProjectViewProjectNode" />
               <item name="simulations" type="462c0819:PsiDirectoryNode" />
-              <item name="offLatice" type="462c0819:PsiDirectoryNode" />
+              <item name="brownianMovement" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="itba" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="simulations" type="b2602c69:ProjectViewProjectNode" />
+              <item name="simulations" type="462c0819:PsiDirectoryNode" />
+              <item name="cellIndexMethod" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="simulations" type="b2602c69:ProjectViewProjectNode" />
@@ -213,14 +233,13 @@
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1553372279084" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1554470831120" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Modules" />
@@ -229,6 +248,13 @@
     <property name="settings.editor.selected.configurable" value="preferences.sourceCode" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/brownianMovement/src/main/java" />
+      <recent name="$PROJECT_DIR$/Results/Densidad Variable" />
+      <recent name="$PROJECT_DIR$/Results/DensidadConstante" />
+      <recent name="$PROJECT_DIR$/Results/980" />
+      <recent name="$PROJECT_DIR$/Results/DensidadConstante/1280" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/offLatice/src/main/java/ar/edu/itba" />
       <recent name="$PROJECT_DIR$/cellIndexMethod/src/main/java/ar/edu/itba" />
@@ -302,16 +328,25 @@
       <workItem from="1553256513226" duration="1846000" />
       <workItem from="1553258946314" duration="7957000" />
       <workItem from="1553369478185" duration="1871000" />
+      <workItem from="1553531560635" duration="2601000" />
+      <workItem from="1553564846646" duration="2667000" />
+      <workItem from="1553568998659" duration="306000" />
+      <workItem from="1553573631743" duration="3000" />
+      <workItem from="1553576264049" duration="1461000" />
+      <workItem from="1553602542343" duration="1664000" />
+      <workItem from="1553782350138" duration="3000" />
+      <workItem from="1554468515531" duration="1889000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="28507000" />
+    <option name="totallyTimeSpent" value="39101000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1440" height="821" extended-state="0" />
+    <frame x="0" y="0" width="1440" height="900" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18526466" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17453505" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -319,8 +354,8 @@
       <window_info id="Capture Tool" order="5" />
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.5385542" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.24554184" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.5373494" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.27846366" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.24819277" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -376,26 +411,7 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/utils/src/main/java/ar/edu/itba/Grid.java</url>
-          <line>41</line>
-          <properties />
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
-  </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/utils/pom.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/offLatice/src/main/java/ar/edu/itba/Algorithm.java" />
     <entry file="file://$PROJECT_DIR$/cellIndexMethod/src/main/java/ar/edu/itba/Algorithm.java" />
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor" />
@@ -410,13 +426,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_162.jdk/Contents/Home/src.zip!/java/lang/NumberFormatException.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="397">
-          <caret line="64" selection-start-line="64" selection-end-line="64" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/cellIndexMethod/src/main/java/ar/edu/itba/Resoruces/GenerateFiles.java" />
     <entry file="file://$PROJECT_DIR$/results1000.txt" />
     <entry file="file://$PROJECT_DIR$/results2.txt" />
@@ -424,30 +433,10 @@
     <entry file="file://$PROJECT_DIR$/Results/results109.txt" />
     <entry file="file://$PROJECT_DIR$/Results/results110.txt" />
     <entry file="file://$PROJECT_DIR$/utils/src/main/java/ar/edu/itba/FileGenerator.java" />
-    <entry file="file://$PROJECT_DIR$/utils/src/main/java/ar/edu/itba/Point.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="33" column="25" selection-start-line="33" selection-start-column="25" selection-end-line="33" selection-end-column="25" />
-          <folding>
-            <element signature="method#Point#0;class#Point#0" />
-            <element signature="method#distanceBetween#0;class#Point#0" />
-            <element signature="method#equals#0;class#Point#0" />
-            <element signature="method#toString#0;class#Point#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/cellIndexMethod/pom.xml">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/Results/offLattice0.txt" />
-    <entry file="file://$PROJECT_DIR$/utils/src/main/java/ar/edu/itba/Property.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="15" selection-start-line="3" selection-start-column="15" selection-end-line="3" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_162.jdk/Contents/Home/src.zip!/java/util/Random.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="284">
@@ -455,18 +444,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/cellIndexMethod/src/main/java/ar/edu/itba/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="4" selection-start-line="4" selection-end-line="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Results/offLattice.xyz">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-27613" />
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/Results/offLattice.xyz" />
     <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_162.jdk/Contents/Home/jre/lib/rt.jar!/sun/nio/fs/UnixException.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
@@ -481,10 +459,71 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Results/timeVaRuido:0.1.xyz" />
+    <entry file="file://$PROJECT_DIR$/Results/timeVa.xyz" />
+    <entry file="file://$PROJECT_DIR$/Results/timeVaRuido:0.0N:300.xyz" />
+    <entry file="file://$PROJECT_DIR$/Results/timeVaRuido:1.0N:300.xyz" />
+    <entry file="file://$PROJECT_DIR$/Results/offLatticeRuido:1.0N:300.xyz" />
+    <entry file="file://$PROJECT_DIR$/Results/timeVaRuido:2.0N:300.xyz" />
+    <entry file="file://$PROJECT_DIR$/Results/timeVaRuido:1.5N:300.xyz" />
+    <entry file="file://$PROJECT_DIR$/Results/timeVaRuido:3.0N:300.xyz" />
+    <entry file="file://$PROJECT_DIR$/Results/timeVaRuido:5.0N:300.xyz" />
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_162.jdk/Contents/Home/src.zip!/java/util/AbstractCollection.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="342" selection-start-line="342" selection-end-line="342" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_162.jdk/Contents/Home/src.zip!/java/lang/Integer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="193">
+          <caret line="614" selection-start-line="614" selection-end-line="614" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_162.jdk/Contents/Home/src.zip!/java/lang/NumberFormatException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="467">
+          <caret line="64" selection-start-line="64" selection-end-line="64" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Results/DensidadConstante/1280/timeVaRuido:1.5N:1280Density:20.0.txt" />
+    <entry file="file://$PROJECT_DIR$/Results/DensidadConstante/1280/timeVaRuido:1.0N:1280Density:20.0.txt" />
+    <entry file="file://$PROJECT_DIR$/Results/DensidadConstante/980/timeVaRuido:0.0N:980Density:20.0.txt" />
+    <entry file="file://$PROJECT_DIR$/Results/DensidadConstante/1280/timeVaRuido:2.0N:1280Density:20.0.txt" />
+    <entry file="file://$PROJECT_DIR$/Results/DensidadConstante/980/offLatticeRuido:0.0N:980Density:20.0.xyz" />
+    <entry file="file://$PROJECT_DIR$/utils/src/main/java/ar/edu/itba/Property.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="15" selection-start-line="3" selection-start-column="15" selection-end-line="3" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cellIndexMethod/src/main/java/ar/edu/itba/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/utils/src/main/java/ar/edu/itba/IO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="30" selection-start-line="30" selection-end-line="30" />
+          <folding>
+            <element signature="method#getParticles#0;class#IO#0" />
+            <element signature="method#RGBtoDouble#0;class#IO#0" />
+            <element signature="method#IO#1;class#IO#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/utils/src/main/java/ar/edu/itba/Particle.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="174">
-          <caret line="32" selection-start-line="32" selection-end-line="32" />
+        <state relative-caret-position="105">
+          <caret line="7" column="27" selection-start-line="7" selection-start-column="27" selection-end-line="7" selection-end-column="27" />
           <folding>
             <element signature="method#Particle#2;class#Particle#0" />
             <element signature="method#distanceBetweenParticles#0;class#Particle#0" />
@@ -493,83 +532,98 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Results/timeVaRuido:0.1.xyz">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Results/timeVa.xyz">
+    <entry file="file://$PROJECT_DIR$/utils/src/main/java/ar/edu/itba/Point.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="22" selection-start-line="2" selection-start-column="22" selection-end-line="2" selection-end-column="22" />
+        <state relative-caret-position="300">
+          <caret line="33" column="25" selection-start-line="33" selection-start-column="25" selection-end-line="33" selection-end-column="25" />
+          <folding>
+            <element signature="method#Point#0;class#Point#0" />
+            <element signature="method#distanceBetween#0;class#Point#0" />
+            <element signature="method#equals#0;class#Point#0" />
+            <element signature="method#toString#0;class#Point#0" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/utils/src/main/java/ar/edu/itba/Processor.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-846">
-          <caret line="13" column="11" selection-start-line="13" selection-start-column="11" selection-end-line="13" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/utils/src/main/java/ar/edu/itba/IO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="512">
-          <caret line="219" column="5" selection-start-line="219" selection-start-column="5" selection-end-line="219" selection-end-column="5" />
-          <folding>
-            <element signature="e#480#566#0" />
-            <element signature="e#599#643#0" />
-            <element signature="method#getL#0;class#IO#0" />
-            <element signature="e#1484#1485#0" expanded="true" />
-            <element signature="e#1531#1532#0" expanded="true" />
-            <element signature="method#getParticles#0;class#IO#0" />
-            <element signature="method#RGBtoDouble#0;class#IO#0" />
-            <element signature="method#IO#1;class#IO#0" />
-          </folding>
+        <state relative-caret-position="150">
+          <caret line="13" column="24" selection-start-line="13" selection-start-column="21" selection-end-line="13" selection-end-column="24" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/utils/src/main/java/ar/edu/itba/Grid.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="101">
-          <caret line="41" selection-start-line="41" selection-end-line="41" />
+        <state relative-caret-position="90">
+          <caret line="6" column="2" selection-start-line="6" selection-start-column="2" selection-end-line="6" selection-end-column="18" />
           <folding>
-            <element signature="method#Grid#0;class#Grid#0" />
             <element signature="method#getField#0;class#Grid#0" />
+            <element signature="e#2806#2862#0" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Results/timeVaRuido:0.0N:300.xyz">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Results/timeVaRuido:1.0N:300.xyz">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Results/offLatticeRuido:1.0N:300.xyz">
-      <provider selected="true" editor-type-id="LargeFileEditor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Results/timeVaRuido:2.0N:300.xyz">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Results/timeVaRuido:1.5N:300.xyz">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Results/timeVaRuido:3.0N:300.xyz">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1153" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Results/timeVaRuido:5.0N:300.xyz">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-24671" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/offLatice/src/main/java/ar/edu/itba/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-409">
-          <caret line="8" column="37" selection-start-line="8" selection-start-column="37" selection-end-line="8" selection-end-column="37" />
+        <state relative-caret-position="573">
+          <caret line="85" column="5" selection-start-line="85" selection-start-column="5" selection-end-line="85" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#generateDinamic#0;class#Main#0" />
+            <element signature="method#getNewPosition#0;class#Main#0" />
+            <element signature="method#getAngleFromNeighbours#0;class#Main#0" />
+            <element signature="method#calculateVa#0;class#Main#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Downloads/SimulacionDeSistemas-master/EventDrivenMolecularDynamics/src/main/java/ar/edu/itba/ss/App.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/brownianMovement/src/main/java/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" selection-start-line="1" selection-end-line="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Downloads/SimulacionDeSistemas-master/EventDrivenMolecularDynamics/src/main/java/ar/edu/itba/ss/Collision.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="11" selection-start-line="4" selection-start-column="11" selection-end-line="4" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Downloads/SimulacionDeSistemas-master/EventDrivenMolecularDynamics/src/main/java/ar/edu/itba/ss/ParticleCollision.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$USER_HOME$/Downloads/SimulacionDeSistemas-master/EventDrivenMolecularDynamics/src/main/java/ar/edu/itba/ss/WallCollision.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$USER_HOME$/Downloads/SimulacionDeSistemas-master/EventDrivenMolecularDynamics/src/main/java/ar/edu/itba/ss/Simulation.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="156">
+          <caret line="28" selection-start-line="28" selection-end-line="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/brownianMovement/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="45" selection-start-line="11" selection-start-column="45" selection-end-line="11" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/utils/src/main/java/ar/edu/itba/ParticleWithMass.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="513">
+          <caret line="105" column="80" selection-start-line="105" selection-start-column="80" selection-end-line="105" selection-end-column="80" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#equals#0;class#Particle#0" />
+            <element signature="method#toString#0;class#Particle#0" />
           </folding>
         </state>
       </provider>
@@ -626,7 +680,7 @@
       </state>
       <state key="ModuleStructureConfigurable.UI">
         <settings>
-          <last-edited>utils</last-edited>
+          <last-edited>brownianMovement</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>

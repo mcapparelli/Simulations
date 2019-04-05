@@ -211,9 +211,17 @@ public class IO {
     }
 
 
-    public static void writeToFileOffLattice(String name, String data, String path){
+    public static void writeToFileOffLatticeXYZ(String name, String data, String path){
         try {
             Files.write(Paths.get(path + "/" + name + ".xyz"), data.getBytes());
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public static void writeToFileOffLatticeTXT(String name, String data, String path){
+        try {
+            Files.write(Paths.get(path + "/" + name + ".txt"), data.getBytes());
         } catch (IOException e) {
             e.printStackTrace();
         }
