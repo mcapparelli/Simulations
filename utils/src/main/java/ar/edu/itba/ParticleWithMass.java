@@ -83,30 +83,38 @@ public class ParticleWithMass {
     }
 
     public Set<ParticleWithMass> generateParticles(Long seed, int n, double l, double smallRadius, double smallMass, double vel) {
-        int counter = n;
         Random randVel = new Random(seed);
         Random randPos = new Random(seed+9654);
         Set<ParticleWithMass> particlesSet = new HashSet<>();
+        ParticleWithMass bigParticle = new ParticleWithMass(l/2,l/2,0.0,0.0, 0.05, 100);
+        particlesSet.add(bigParticle);
         if(n > 0){
             do {
                 double xpos = l * randPos.nextDouble();
                 double ypos = l * randPos.nextDouble();
 
-                double velAngle = randVel.nextDouble() * 360;
+                double velAngle = randVel.nextDouble() * 2 * Math.PI;
                 double velVariation = vel * randVel.nextDouble();
 
                 double xvel = velVariation * cos(velAngle);
                 double yvel = velVariation * sin(velAngle);
 
                 ParticleWithMass particleWithMass = new ParticleWithMass(xpos, ypos, xvel, yvel, smallRadius, smallMass);
-                particlesSet.add(particleWithMass);
-                counter--;
-            } while (counter > 0);
+                if(!existParticleInPosition(xpos,ypos,smallRadius, particlesSet))
+                    particlesSet.add(particleWithMass);
+            } while (particlesSet.size() != n + 1);
 
-            ParticleWithMass bigParticle = new ParticleWithMass(l/2,l/2,0.0,0.0, 0.05, 100);
-            particlesSet.add(bigParticle);
         }
         return particlesSet;
+    }
+
+    private boolean existParticleInPosition(double xPosition, double yPosition, double radius, Set<ParticleWithMass> particles) {
+        for(ParticleWithMass p : particles) {
+            if( Math.pow((p.getxPosition() - xPosition),2) + Math.pow((p.getyPosition() - yPosition),2) <= Math.pow((p.getRadius() + radius),2) ) {
+                return true;
+            }
+        }
+        return false;
     }
 
     @Override
