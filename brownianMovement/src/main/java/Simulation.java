@@ -22,17 +22,17 @@ public class Simulation {
     private double time;
 
 
-    public Simulation(double boxSize, int smallParticlesAmount) {
+    public Simulation(double boxSize, Set<ParticleWithMass> particles) {
         this.boxSize = boxSize;
         this.particles = new HashSet<>();
         this.bw=null;
         this.queue = new PriorityQueue<>();
         this.time =0;
-        particles = null; //todo setearlo.
+        this.particles = particles;
     }
 
 
-    public void start(int iterations, String outPath, Long seed) {
+    public void start(int iterations, String outPath) {
         long start= System.currentTimeMillis();
         DecimalFormat df = new DecimalFormat("#");
         df.setMaximumFractionDigits(8);
@@ -451,14 +451,7 @@ public class Simulation {
                 .append(allParticles.size()+4)
                 .append("\r\n")
                 .append("//ID\t X\t Y\t Radius\t Vx\t Vy\t\r\n");
-        Set<ParticleWithMass> limits =new HashSet<>();
-        limits.addAll(
-                Arrays.asList(new ParticleWithMass(-1,0,0,0,0,0,0),
-        new ParticleWithMass(-2,0,boxSize,0,0,0,0),
-        new ParticleWithMass(-3,boxSize,0,0,0,0,0),
-        new ParticleWithMass(-4,boxSize,boxSize,0,0,0,0)));
         appendParticles(allParticles, builder);
-        appendParticles(limits,builder);
         return builder.toString();
     }
 

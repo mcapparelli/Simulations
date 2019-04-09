@@ -137,7 +137,6 @@ public class ParticleWithMass {
 
     @Override
     public String toString() {
-
         return "ar.edu.itba.ParticleWithMass{" +
                 "id=" + id +
                 ", xPosition=" + xPosition +

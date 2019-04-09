@@ -18,7 +18,7 @@ public class ParticleAgainstParticle extends Collision {
     @Override
     public String toString() {
         return "ParticleAgainstParticle{" +
-                "p1=" + p1.getId() +
+                  "p1=" + p1.getId() +
                 ", p2=" + p2.getId() +
                 ", time=" + this.getTime() +
                 '}';

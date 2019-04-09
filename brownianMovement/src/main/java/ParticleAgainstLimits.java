@@ -15,7 +15,7 @@ public class ParticleAgainstLimits extends Collision {
     @Override
     public String toString() {
         return "WallCollsion{" +
-                "p1=" + p1.getId() +
+                  "p1=" + p1.getId() +
                 ", time=" + this.getTime() +
                 '}';
     }

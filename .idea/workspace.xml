@@ -2,15 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0b0d0e33-b037-41fd-8063-1aad5a488f1d" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/brownianMovement/src/main/java/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/brownianMovement/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/brownianMovement/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/brownianMovement/src/main/java/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/brownianMovement/src/main/java/App.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/brownianMovement/src/main/java/Collision.java" beforeDir="false" afterPath="$PROJECT_DIR$/brownianMovement/src/main/java/Collision.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/brownianMovement/src/main/java/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/brownianMovement/src/main/java/ParticleCollision.java" beforeDir="false" afterPath="$PROJECT_DIR$/brownianMovement/src/main/java/ParticleAgainstParticle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/brownianMovement/src/main/java/App.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/brownianMovement/src/main/java/ParticleAgainstLimits.java" beforeDir="false" afterPath="$PROJECT_DIR$/brownianMovement/src/main/java/ParticleAgainstLimits.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/brownianMovement/src/main/java/ParticleAgainstParticle.java" beforeDir="false" afterPath="$PROJECT_DIR$/brownianMovement/src/main/java/ParticleAgainstParticle.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/brownianMovement/src/main/java/Simulation.java" beforeDir="false" afterPath="$PROJECT_DIR$/brownianMovement/src/main/java/Simulation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/brownianMovement/src/main/java/WallCollision.java" beforeDir="false" afterPath="$PROJECT_DIR$/brownianMovement/src/main/java/ParticleAgainstLimits.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/utils/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/utils/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/utils/src/main/java/ar/edu/itba/ParticleWithMass.java" beforeDir="false" afterPath="$PROJECT_DIR$/utils/src/main/java/ar/edu/itba/ParticleWithMass.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
@@ -27,80 +24,20 @@
   <component name="FileEditorManager">
     <leaf>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/brownianMovement/src/main/java/Simulation.java">
+        <entry file="file://$PROJECT_DIR$/brownianMovement/src/main/java/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="566">
-              <caret line="329" column="44" lean-forward="true" selection-start-line="329" selection-start-column="44" selection-end-line="329" selection-end-column="44" />
+            <state relative-caret-position="180">
+              <caret line="12" column="38" selection-start-line="12" selection-start-column="38" selection-end-line="12" selection-end-column="38" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="method#calculateNextCrashTimeForEveryone#0;class#Simulation#0" />
-                <element signature="method#wallCrash#0;class#Simulation#0" />
-                <element signature="method#updateParticlesPosition#0;class#Simulation#0" />
-                <element signature="method#closeBW#0;class#Simulation#0" />
-                <element signature="method#initalizeBW#0;class#Simulation#0" />
-                <element signature="method#appendParticles#0;class#Simulation#0" />
-                <element signature="method#appendToFile#0;class#Simulation#0" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/brownianMovement/src/main/java/Collision.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="4" column="23" selection-start-line="4" selection-start-column="23" selection-end-line="4" selection-end-column="23" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/brownianMovement/src/main/java/App.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret lean-forward="true" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/brownianMovement/src/main/java/ParticleAgainstParticle.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret line="4" column="31" lean-forward="true" selection-start-line="4" selection-start-column="31" selection-end-line="4" selection-end-column="31" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/brownianMovement/src/main/java/ParticleAgainstLimits.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="7" column="24" selection-start-line="7" selection-start-column="24" selection-end-line="7" selection-end-column="24" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#497#498#0" expanded="true" />
-                <element signature="e#561#562#0" expanded="true" />
-                <element signature="e#618#619#0" expanded="true" />
-                <element signature="e#653#654#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/utils/src/main/java/ar/edu/itba/ParticleWithMass.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="719">
-              <caret line="110" column="19" selection-start-line="110" selection-start-column="19" selection-end-line="110" selection-end-column="19" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="method#equals#0;class#ParticleWithMass#0" />
-                <element signature="e#4030#4031#0" expanded="true" />
-                <element signature="e#4117#4118#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
+        <entry file="file://$PROJECT_DIR$/Results/eventDriven2019-04-09T15:55:47.968.txt">
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
     </leaf>
@@ -135,7 +72,6 @@
         <option value="$PROJECT_DIR$/utils/src/main/java/ar/edu/itba/IO.java" />
         <option value="$PROJECT_DIR$/utils/src/main/java/ar/edu/itba/Particle.java" />
         <option value="$PROJECT_DIR$/offLatice/src/main/java/ar/edu/itba/Main.java" />
-        <option value="$PROJECT_DIR$/brownianMovement/src/main/java/Main.java" />
         <option value="$PROJECT_DIR$/brownianMovement/src/main/java/Particle.java" />
         <option value="$PROJECT_DIR$/brownianMovement/pom.xml" />
         <option value="$USER_HOME$/Downloads/SimulacionDeSistemas-master/EventDrivenMolecularDynamics/src/main/java/ar/edu/itba/ss/Simulation.java" />
@@ -144,9 +80,11 @@
         <option value="$PROJECT_DIR$/brownianMovement/src/main/java/Collision.java" />
         <option value="$PROJECT_DIR$/brownianMovement/src/main/java/WallCollision.java" />
         <option value="$PROJECT_DIR$/brownianMovement/src/main/java/AgainstLimits.java" />
+        <option value="$PROJECT_DIR$/brownianMovement/src/main/java/ParticleAgainstParticle.java" />
         <option value="$PROJECT_DIR$/brownianMovement/src/main/java/ParticleAgainstLimits.java" />
         <option value="$PROJECT_DIR$/brownianMovement/src/main/java/App.java" />
         <option value="$PROJECT_DIR$/utils/src/main/java/ar/edu/itba/ParticleWithMass.java" />
+        <option value="$PROJECT_DIR$/brownianMovement/src/main/java/Main.java" />
         <option value="$PROJECT_DIR$/brownianMovement/src/main/java/Simulation.java" />
       </list>
     </option>
@@ -224,6 +162,11 @@
             <path>
               <item name="simulations" type="b2602c69:ProjectViewProjectNode" />
               <item name="simulations" type="462c0819:PsiDirectoryNode" />
+              <item name="Results" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="simulations" type="b2602c69:ProjectViewProjectNode" />
+              <item name="simulations" type="462c0819:PsiDirectoryNode" />
               <item name="utils" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -266,7 +209,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1554833320307" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1554836305578" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Modules" />
@@ -299,7 +242,14 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.Main (1)">
+    <configuration name="Main (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Main" />
+      <module name="brownianMovement" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="ar.edu.itba.Main" />
       <module name="offLatice" />
@@ -330,6 +280,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Main (1)" />
         <item itemvalue="Application.Main" />
         <item itemvalue="Application.Main" />
       </list>
@@ -363,18 +314,18 @@
       <workItem from="1553602542343" duration="1664000" />
       <workItem from="1553782350138" duration="3000" />
       <workItem from="1554468515531" duration="3304000" />
-      <workItem from="1554819230594" duration="5544000" />
+      <workItem from="1554819230594" duration="7680000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="46865000" />
+    <option name="totallyTimeSpent" value="49001000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1920" height="1080" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18743344" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18743344" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -383,7 +334,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.5366337" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.27846366" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.27821782" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.24819277" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -393,7 +344,7 @@
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Terminal" order="10" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
-      <window_info anchor="bottom" id="Messages" order="12" weight="0.32891566" />
+      <window_info anchor="bottom" id="Messages" order="12" weight="0.32871288" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -439,9 +390,19 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/brownianMovement/src/main/java/Simulation.java</url>
+          <line>477</line>
+          <properties />
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Results/results109.txt" />
-    <entry file="file://$PROJECT_DIR$/Results/results110.txt" />
     <entry file="file://$PROJECT_DIR$/utils/src/main/java/ar/edu/itba/FileGenerator.java" />
     <entry file="file://$PROJECT_DIR$/cellIndexMethod/pom.xml">
       <provider selected="true" editor-type-id="text-editor" />
@@ -616,20 +577,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/brownianMovement/src/main/java/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" selection-start-line="1" selection-end-line="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/brownianMovement/src/main/java/Collision.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="4" column="23" selection-start-line="4" selection-start-column="23" selection-end-line="4" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_162.jdk/Contents/Home/src.zip!/java/lang/System.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
@@ -637,26 +584,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/utils/src/main/java/ar/edu/itba/ParticleWithMass.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="719">
-          <caret line="110" column="19" selection-start-line="110" selection-start-column="19" selection-end-line="110" selection-end-column="19" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#equals#0;class#ParticleWithMass#0" />
-            <element signature="e#4030#4031#0" expanded="true" />
-            <element signature="e#4117#4118#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
+    <entry file="file://$PROJECT_DIR$/brownianMovement/src/main/java/ParticleAgainstParticle.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="20" column="18" selection-start-line="20" selection-start-column="18" selection-end-line="20" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/brownianMovement/src/main/java/ParticleAgainstLimits.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="24" selection-start-line="7" selection-start-column="24" selection-end-line="7" selection-end-column="24" />
+        <state relative-caret-position="255">
+          <caret line="17" column="18" selection-start-line="17" selection-start-column="18" selection-end-line="17" selection-end-column="18" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#497#498#0" expanded="true" />
@@ -667,33 +608,69 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/brownianMovement/src/main/java/App.java">
+    <entry file="file://$PROJECT_DIR$/brownianMovement/src/main/java/Collision.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret lean-forward="true" />
+        <state relative-caret-position="30">
+          <caret line="4" column="23" selection-start-line="4" selection-start-column="23" selection-end-line="4" selection-end-column="23" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/brownianMovement/src/main/java/ParticleAgainstParticle.java">
+    <entry file="file://$PROJECT_DIR$/brownianMovement/src/main/java/App.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret line="4" column="31" lean-forward="true" selection-start-line="4" selection-start-column="31" selection-end-line="4" selection-end-column="31" />
+        <state relative-caret-position="120">
+          <caret line="8" column="8" selection-start-line="8" selection-start-column="8" selection-end-line="11" selection-end-column="8" />
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Results/eventDriven2019-04-09T15:43:53.560.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-9101" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/utils/src/main/java/ar/edu/itba/ParticleWithMass.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1530">
+          <caret line="138" column="30" selection-start-line="138" selection-start-column="30" selection-end-line="138" selection-end-column="30" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#equals#0;class#ParticleWithMass#0" />
+            <element signature="e#4030#4031#0" expanded="true" />
+            <element signature="e#4117#4118#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Results/eventDriven2019-04-09T15:55:47.968.txt">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/brownianMovement/src/main/java/Simulation.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="566">
-          <caret line="329" column="44" lean-forward="true" selection-start-line="329" selection-start-column="44" selection-end-line="329" selection-end-column="44" />
+        <state relative-caret-position="487">
+          <caret line="454" column="34" selection-start-line="454" selection-start-column="34" selection-end-line="454" selection-end-column="34" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="method#startForTimeBruteForce#0;class#Simulation#0" />
+            <element signature="method#startBruteForce#0;class#Simulation#0" />
+            <element signature="method#startForAnimation#0;class#Simulation#0" />
             <element signature="method#calculateNextCrashTimeForEveryone#0;class#Simulation#0" />
+            <element signature="method#calculateNextCrashTimeForEveryone#1;class#Simulation#0" />
+            <element signature="method#particlesCrash#0;class#Simulation#0" />
             <element signature="method#wallCrash#0;class#Simulation#0" />
             <element signature="method#updateParticlesPosition#0;class#Simulation#0" />
             <element signature="method#closeBW#0;class#Simulation#0" />
             <element signature="method#initalizeBW#0;class#Simulation#0" />
             <element signature="method#appendParticles#0;class#Simulation#0" />
             <element signature="method#appendToFile#0;class#Simulation#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/brownianMovement/src/main/java/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="38" selection-start-line="12" selection-start-column="38" selection-end-line="12" selection-end-column="38" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
