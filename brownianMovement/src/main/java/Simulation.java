@@ -39,7 +39,7 @@ public class Simulation {
         if (!initalizeBW(outPath)) return;
 
         appendToFile(bw,"Time between collisions: \n");
-        appendToFile(bw,"particles: "+particles.size()+ " iterations: "+iterations+"\n");
+        appendToFile(bw,"particles: " +particles.size()+ " iterations: "+iterations+"\n");
 
         calculateNextCrashTimeForEveryone();
 
@@ -95,8 +95,9 @@ public class Simulation {
                 System.out.println(collisions+ "\t"+nextTime+" s");
                 nextTime++;
                 collisions=0;
+            } else {
+                collisions++;
             }
-            collisions++;
             for(ParticleWithMass p : nextCollision.getParticles()){
                 updateQueue(p);
             }
@@ -105,19 +106,18 @@ public class Simulation {
             }
         }
 
-        appendToFile(bw,"kjbkjbkkjkjbkjbkjhkljhljkhkjhkljhlkjhkjhkhlkjhlkjhkjhkjhkjhkjlhkljhkljhklj");
+        appendToFile(bw,"--------------------------------\n");
         StringBuilder builder2 = new StringBuilder();
         particles.stream().forEach((x)->builder2.append(Math.sqrt(Math.pow(x.getxSpeed(),2)+Math.pow(x.getySpeed(),2))+"\n"));
         appendToFile(bw,builder2.toString());
         long end = System.currentTimeMillis();
 
-        System.out.println("Simulated time: "+time+"s");
         appendToFile(bw,"Simulated time: "+time+"s\n");
         appendToFile(bw,"Proccesing time:"+(end-start)+"ms\n");
+        System.out.println("Simulated time: "+time+"s");
         System.out.println("Proccesing time:"+(end-start)+"ms");
         closeBW();
     }
-
 
     public void startForTime(double endTime, String outPath) {
         long start= System.currentTimeMillis();
@@ -198,7 +198,7 @@ public class Simulation {
     }
 
     public void startForAnimation(int animationTime, String outPath){
-        int framesPerSecond = 10;
+        int framesPerSecond = 24;
         double jump = (double)1/framesPerSecond;
         double nextFrame = jump;
         calculateNextCrashTimeForEveryone();
@@ -448,7 +448,7 @@ public class Simulation {
 
     private String generateFileString(Set<ParticleWithMass> allParticles){
         StringBuilder builder = new StringBuilder()
-                .append(allParticles.size()+4)
+                .append(allParticles.size())
                 .append("\r\n")
                 .append("//ID\t X\t Y\t Radius\t Vx\t Vy\t\r\n");
         appendParticles(allParticles, builder);

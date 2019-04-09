@@ -10,6 +10,7 @@ import static java.lang.StrictMath.sin;
 
 public class ParticleWithMass {
     private static int id = 0;
+    private int properId;
     private double xPosition;
     private double yPosition;
     private double xSpeed;
@@ -26,11 +27,11 @@ public class ParticleWithMass {
         this.radius = radius;
         this.mass = mass;
         this.crashesAmount = 0;
-        this.id = id++;
+        properId = id++;
     }
 
     public int getId() {
-        return id;
+        return properId;
     }
 
 
