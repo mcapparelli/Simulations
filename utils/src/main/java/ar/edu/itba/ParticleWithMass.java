@@ -82,7 +82,7 @@ public class ParticleWithMass {
         this.ySpeed = ySpeed;
     }
 
-    public Set<ParticleWithMass> generateParticles(Long seed, int n, double l, double smallRadius, double smallMass, double vel) {
+    public static Set<ParticleWithMass> generateParticles(Long seed, int n, double l, double smallRadius, double smallMass, double vel) {
         Random randVel = new Random(seed);
         Random randPos = new Random(seed+9654);
         Set<ParticleWithMass> particlesSet = new HashSet<>();
@@ -108,7 +108,7 @@ public class ParticleWithMass {
         return particlesSet;
     }
 
-    private boolean existParticleInPosition(double xPosition, double yPosition, double radius, Set<ParticleWithMass> particles) {
+    private static boolean existParticleInPosition(double xPosition, double yPosition, double radius, Set<ParticleWithMass> particles) {
         for(ParticleWithMass p : particles) {
             if( Math.pow((p.getxPosition() - xPosition),2) + Math.pow((p.getyPosition() - yPosition),2) <= Math.pow((p.getRadius() + radius),2) ) {
                 return true;

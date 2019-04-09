@@ -1,12 +1,13 @@
+import ar.edu.itba.ParticleWithMass;
+
 import java.util.Set;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
-public class WallCollision extends Collision{
-    Particle p1;
+public class ParticleAgainstLimits extends Collision {
+    ParticleWithMass p1;
 
-
-    public WallCollision (Particle p, double time){
+    public ParticleAgainstLimits(ParticleWithMass p, double time){
         super(time);
         this.p1=p;
     }
@@ -20,12 +21,12 @@ public class WallCollision extends Collision{
     }
 
     @Override
-    public Set<Particle> getParticles() {
+    public Set<ParticleWithMass> getParticles() {
         return Stream.of(p1).collect(Collectors.toSet());
     }
 
     @Override
-    public boolean contains(Particle p) {
+    public boolean contains(ParticleWithMass p) {
         return p1.equals(p);
     }
 }
