@@ -3,10 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="0b0d0e33-b037-41fd-8063-1aad5a488f1d" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Results/eventDriven2019-04-09T15:55:47.968.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Results/animation/eventDriven2019-04-09T17:21:32.232.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Results/eventDriven2019-04-09T17:20:41.898.txt" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/brownianMovement/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/brownianMovement/src/main/java/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/brownianMovement/src/main/java/Simulation.java" beforeDir="false" afterPath="$PROJECT_DIR$/brownianMovement/src/main/java/Simulation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/utils/src/main/java/ar/edu/itba/ParticleWithMass.java" beforeDir="false" afterPath="$PROJECT_DIR$/utils/src/main/java/ar/edu/itba/ParticleWithMass.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <ignored path="$PROJECT_DIR$/cellIndexMethod/target/" />
@@ -20,92 +20,41 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/brownianMovement/src/main/java/Main.java">
+        <entry file="file://$PROJECT_DIR$/brownianMovement/src/main/java/Simulation.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="4" column="19" lean-forward="true" selection-start-line="4" selection-start-column="19" selection-end-line="4" selection-end-column="19" />
+            <state relative-caret-position="281">
+              <caret line="178" column="17" selection-start-line="178" selection-start-column="17" selection-end-line="178" selection-end-column="17" />
               <folding>
-                <element signature="imports" expanded="true" />
+                <element signature="method#Simulation#0;class#Simulation#0" />
+                <element signature="method#calculateNextCrashTimeForEveryone#0;class#Simulation#0" />
+                <element signature="method#calculateNextCrashTimeForEveryone#1;class#Simulation#0" />
+                <element signature="method#getNextCrashTime#0;class#Simulation#0" />
+                <element signature="method#particlesCrash#0;class#Simulation#0" />
+                <element signature="method#wallCrash#0;class#Simulation#0" />
+                <element signature="method#updateParticlesPosition#0;class#Simulation#0" />
+                <element signature="method#saveCrashedParticle#0;class#Simulation#0" />
+                <element signature="method#saveCrashedParticle#1;class#Simulation#0" />
+                <element signature="method#updateSpeedCrashedParticles#0;class#Simulation#0" />
+                <element signature="method#crashedAgainstVerticalWall#0;class#Simulation#0" />
+                <element signature="method#closeBW#0;class#Simulation#0" />
+                <element signature="method#initalizeBW#0;class#Simulation#0" />
+                <element signature="method#generateFileString#0;class#Simulation#0" />
+                <element signature="method#appendParticles#0;class#Simulation#0" />
+                <element signature="method#appendToFile#0;class#Simulation#0" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/brownianMovement/src/main/java/Simulation.java">
+        <entry file="file://$PROJECT_DIR$/brownianMovement/src/main/java/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="498">
-              <caret line="98" selection-start-line="98" selection-end-line="98" />
+            <state relative-caret-position="120">
+              <caret line="8" column="90" selection-start-line="8" selection-start-column="90" selection-end-line="8" selection-end-column="90" />
               <folding>
-                <element signature="method#Simulation#0;class#Simulation#0" />
-                <element signature="method#start#0;class#Simulation#0" />
-                <element signature="e#1421#1929#1" />
-                <element signature="e#1872#1919#1" />
-                <element signature="method#startForTime#0;class#Simulation#0" />
-                <element signature="e#4804#5427#1" />
-                <element signature="e#5069#5277#1" />
-                <element signature="e#5370#5417#1" />
-                <element signature="method#startForTimeBruteForce#0;class#Simulation#0" />
-                <element signature="e#6063#6616#1" />
-                <element signature="e#6219#6427#1" />
-                <element signature="method#startBruteForce#0;class#Simulation#0" />
-                <element signature="e#7085#7371#1" />
-                <element signature="method#startForAnimation#0;class#Simulation#0" />
-                <element signature="e#7875#8612#1" />
-                <element signature="e#7980#8265#1" />
-                <element signature="e#8269#8602#1" />
-                <element signature="e#8533#8588#1" />
-                <element signature="method#startForAnimationBruteForce#0;class#Simulation#0" />
-                <element signature="e#9051#9500#1" />
-                <element signature="e#9171#9315#1" />
-                <element signature="e#9319#9490#1" />
-                <element signature="method#updateQueue#0;class#Simulation#0" />
-                <element signature="e#9783#9873#1" />
-                <element signature="e#9923#10254#1" />
-                <element signature="e#9965#10244#1" />
-                <element signature="e#10110#10230#1" />
-                <element signature="method#calculateNextCrashTimeForEveryone#0;class#Simulation#0" />
-                <element signature="method#calculateNextCrashTimeForEveryone#1;class#Simulation#0" />
-                <element signature="e#10659#11397#1" />
-                <element signature="e#10820#10906#1" />
-                <element signature="e#10957#11232#1" />
-                <element signature="e#11102#11218#1" />
-                <element signature="method#getNextCrashTime#0;class#Simulation#0" />
-                <element signature="e#11575#12255#1" />
-                <element signature="e#11698#11809#1" />
-                <element signature="e#11904#12245#1" />
-                <element signature="e#11943#12231#1" />
-                <element signature="e#12067#12213#1" />
-                <element signature="method#particlesCrash#0;class#Simulation#0" />
-                <element signature="e#12642#12698#1" />
-                <element signature="e#12901#12957#1" />
-                <element signature="method#wallCrash#0;class#Simulation#0" />
-                <element signature="e#13193#13289#1" />
-                <element signature="e#13317#13403#1" />
-                <element signature="e#13434#13531#1" />
-                <element signature="e#13559#13645#1" />
-                <element signature="method#updateParticlesPosition#0;class#Simulation#0" />
-                <element signature="e#13814#13963#1" />
-                <element signature="method#saveCrashedParticle#0;class#Simulation#0" />
-                <element signature="method#saveCrashedParticle#1;class#Simulation#0" />
-                <element signature="method#updateSpeedCrashedParticles#0;class#Simulation#0" />
-                <element signature="e#14603#14831#1" />
-                <element signature="e#14695#14755#1" />
-                <element signature="e#14761#14821#1" />
-                <element signature="e#14919#16048#1" />
-                <element signature="method#crashedAgainstVerticalWall#0;class#Simulation#0" />
-                <element signature="e#16212#16248#1" />
-                <element signature="e#16311#16347#1" />
-                <element signature="method#closeBW#0;class#Simulation#0" />
-                <element signature="e#16446#16517#0" />
-                <element signature="method#initalizeBW#0;class#Simulation#0" />
-                <element signature="e#16616#16741#0" />
-                <element signature="e#16763#16833#0" />
-                <element signature="method#generateFileString#0;class#Simulation#0" />
-                <element signature="method#appendParticles#0;class#Simulation#0" />
-                <element signature="e#17369#17983#1" />
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -124,6 +73,9 @@
     <findStrings>
       <find>500</find>
     </findStrings>
+    <dirStrings>
+      <dir>$PROJECT_DIR$/Results/heat</dir>
+    </dirStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -162,8 +114,9 @@
         <option value="$PROJECT_DIR$/Results/eventDriven2019-04-09T15:55:47.968.txt" />
         <option value="$PROJECT_DIR$/utils/src/main/java/ar/edu/itba/ParticleWithMass.java" />
         <option value="$PROJECT_DIR$/Results/heat/eventDriven2019-04-09T16:47:27.125.txt" />
-        <option value="$PROJECT_DIR$/brownianMovement/src/main/java/Simulation.java" />
+        <option value="$PROJECT_DIR$/Results/heat/eventDriven2019-04-11T20:20:02.057.txt" />
         <option value="$PROJECT_DIR$/brownianMovement/src/main/java/Main.java" />
+        <option value="$PROJECT_DIR$/brownianMovement/src/main/java/Simulation.java" />
       </list>
     </option>
   </component>
@@ -193,9 +146,10 @@
       <select />
     </treeState>
   </component>
-  <component name="ProjectFrameBounds" fullScreen="true">
-    <option name="width" value="1920" />
-    <option name="height" value="1080" />
+  <component name="ProjectFrameBounds">
+    <option name="y" value="23" />
+    <option name="width" value="1440" />
+    <option name="height" value="825" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -248,6 +202,12 @@
               <item name="simulations" type="462c0819:PsiDirectoryNode" />
               <item name="Results" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="simulations" type="b2602c69:ProjectViewProjectNode" />
+              <item name="simulations" type="462c0819:PsiDirectoryNode" />
+              <item name="Results" type="462c0819:PsiDirectoryNode" />
+              <item name="animation" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -258,7 +218,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1554841302267" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1555046029054" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Modules" />
@@ -363,17 +323,23 @@
       <workItem from="1553602542343" duration="1664000" />
       <workItem from="1553782350138" duration="3000" />
       <workItem from="1554468515531" duration="3304000" />
-      <workItem from="1554819230594" duration="12239000" />
+      <workItem from="1554819230594" duration="12278000" />
+      <workItem from="1554991566296" duration="8000" />
+      <workItem from="1555009405073" duration="833000" />
+      <workItem from="1555013849425" duration="4259000" />
+      <workItem from="1555028290247" duration="192000" />
+      <workItem from="1555039478021" duration="3283000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="53560000" />
+    <option name="totallyTimeSpent" value="62174000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1920" height="1080" extended-state="0" />
+    <frame x="0" y="23" width="1440" height="825" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.29392973" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.20457797" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -381,9 +347,9 @@
       <window_info id="Capture Tool" order="5" />
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.5366337" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.27821782" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.24819277" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.5361528" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.35061392" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.27830833" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -392,7 +358,7 @@
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Terminal" order="10" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
-      <window_info anchor="bottom" id="Messages" order="12" weight="0.32871288" />
+      <window_info anchor="bottom" id="Messages" order="12" weight="0.32742155" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -451,36 +417,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Results/timeVa.xyz" />
-    <entry file="file://$PROJECT_DIR$/Results/timeVaRuido:0.0N:300.xyz" />
-    <entry file="file://$PROJECT_DIR$/Results/timeVaRuido:1.0N:300.xyz" />
-    <entry file="file://$PROJECT_DIR$/Results/offLatticeRuido:1.0N:300.xyz" />
-    <entry file="file://$PROJECT_DIR$/Results/timeVaRuido:2.0N:300.xyz" />
-    <entry file="file://$PROJECT_DIR$/Results/timeVaRuido:1.5N:300.xyz" />
-    <entry file="file://$PROJECT_DIR$/Results/timeVaRuido:3.0N:300.xyz" />
-    <entry file="file://$PROJECT_DIR$/Results/timeVaRuido:5.0N:300.xyz" />
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_162.jdk/Contents/Home/src.zip!/java/util/AbstractCollection.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="342" selection-start-line="342" selection-end-line="342" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_162.jdk/Contents/Home/src.zip!/java/lang/Integer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="193">
-          <caret line="614" selection-start-line="614" selection-end-line="614" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_162.jdk/Contents/Home/src.zip!/java/lang/NumberFormatException.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="467">
-          <caret line="64" selection-start-line="64" selection-end-line="64" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Results/DensidadConstante/1280/timeVaRuido:1.5N:1280Density:20.0.txt" />
     <entry file="file://$PROJECT_DIR$/Results/DensidadConstante/1280/timeVaRuido:1.0N:1280Density:20.0.txt" />
     <entry file="file://$PROJECT_DIR$/Results/DensidadConstante/980/timeVaRuido:0.0N:980Density:20.0.txt" />
     <entry file="file://$PROJECT_DIR$/Results/DensidadConstante/1280/timeVaRuido:2.0N:1280Density:20.0.txt" />
@@ -614,84 +550,40 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/brownianMovement/src/main/java/ParticleAgainstLimits.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" column="18" selection-start-line="17" selection-start-column="18" selection-end-line="17" selection-end-column="18" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#497#498#0" expanded="true" />
-            <element signature="e#561#562#0" expanded="true" />
-            <element signature="e#618#619#0" expanded="true" />
-            <element signature="e#653#654#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/brownianMovement/src/main/java/App.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="8" selection-start-line="8" selection-start-column="8" selection-end-line="11" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Results/eventDriven2019-04-09T15:43:53.560.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-9101" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Results/eventDriven2019-04-09T15:55:47.968.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="437">
-          <caret line="503" column="20" selection-start-line="503" selection-start-column="20" selection-end-line="503" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Results/eventDriven2019-04-09T16:15:49.497.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-14425" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Results/eventDriven2019-04-09T16:12:10.065.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1087" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Results/eventDriven2019-04-09T16:22:37.520.txt">
+    <entry file="file://$PROJECT_DIR$/brownianMovement/src/main/java/App.java" />
+    <entry file="file://$PROJECT_DIR$/Results/eventDriven2019-04-09T15:43:53.560.txt" />
+    <entry file="file://$PROJECT_DIR$/Results/eventDriven2019-04-09T15:55:47.968.txt" />
+    <entry file="file://$PROJECT_DIR$/Results/eventDriven2019-04-09T16:15:49.497.txt" />
+    <entry file="file://$PROJECT_DIR$/Results/eventDriven2019-04-09T16:12:10.065.txt" />
+    <entry file="file://$PROJECT_DIR$/Results/eventDriven2019-04-09T16:22:37.520.txt" />
+    <entry file="file://$PROJECT_DIR$/Results/eventDriven2019-04-09T16:22:55.018.txt" />
+    <entry file="file://$PROJECT_DIR$/Results/heat/eventDriven2019-04-09T16:45:49.267.txt" />
+    <entry file="file://$PROJECT_DIR$/Results/heat/eventDriven2019-04-09T16:47:27.125.txt" />
+    <entry file="file://$PROJECT_DIR$/Results/eventDriven2019-04-09T17:05:27.504.txt" />
+    <entry file="file://$PROJECT_DIR$/Results/eventDriven2019-04-09T17:10:21.355.txt" />
+    <entry file="file://$PROJECT_DIR$/Results/heat/eventDriven2019-04-11T19:30:37.155.txt" />
+    <entry file="file://$PROJECT_DIR$/Results/heat/eventDriven2019-04-11T19:32:06.517.txt" />
+    <entry file="file://$PROJECT_DIR$/Results/heat/eventDriven2019-04-11T19:35:50.469.txt" />
+    <entry file="file://$PROJECT_DIR$/Results/heat/eventDriven2019-04-11T20:20:02.057.txt" />
+    <entry file="file://$PROJECT_DIR$/Results/heat/eventDriven2019-04-11T20:26:29.694.txt" />
+    <entry file="file://$PROJECT_DIR$/Results/heat/eventDriven2019-04-11T21:19:04.793.txt">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/Results/eventDriven2019-04-09T16:22:55.018.txt">
+    <entry file="file://$PROJECT_DIR$/Results/heat/0.1.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Results/heat/0.5.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="352">
-          <caret line="411" selection-start-line="411" selection-end-line="411" selection-end-column="3" />
+        <state relative-caret-position="137">
+          <caret line="11" column="12" lean-forward="true" selection-start-line="11" selection-start-column="12" selection-end-line="11" selection-end-column="12" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/utils/src/main/java/ar/edu/itba/ParticleWithMass.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="82">
-          <caret line="96" column="18" lean-forward="true" selection-start-line="96" selection-start-column="18" selection-end-line="96" selection-end-column="18" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1175#1176#0" expanded="true" />
-            <element signature="e#1204#1205#0" expanded="true" />
-            <element signature="method#equals#0;class#ParticleWithMass#0" />
-            <element signature="method#toString#0;class#ParticleWithMass#0" />
-          </folding>
-        </state>
-      </provider>
+    <entry file="file://$PROJECT_DIR$/Results/heat/70.8 - 0.3.txt">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/Results/heat/eventDriven2019-04-09T16:45:49.267.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-4450" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Results/heat/eventDriven2019-04-09T16:47:27.125.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="1" selection-start-column="1" selection-end-column="1" />
-        </state>
-      </provider>
+    <entry file="file://$PROJECT_DIR$/Results/heat/48.9 - 0,5.txt">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/brownianMovement/src/main/java/Collision.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -700,94 +592,70 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Results/eventDriven2019-04-09T17:05:27.504.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Results/eventDriven2019-04-09T17:10:21.355.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/brownianMovement/src/main/java/Simulation.java">
+    <entry file="file://$PROJECT_DIR$/brownianMovement/src/main/java/ParticleAgainstLimits.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="498">
-          <caret line="98" selection-start-line="98" selection-end-line="98" />
+        <state relative-caret-position="300">
+          <caret line="20" column="5" selection-start-line="20" selection-start-column="5" selection-end-line="20" selection-end-column="5" />
           <folding>
-            <element signature="method#Simulation#0;class#Simulation#0" />
-            <element signature="method#start#0;class#Simulation#0" />
-            <element signature="e#1421#1929#1" />
-            <element signature="e#1872#1919#1" />
-            <element signature="method#startForTime#0;class#Simulation#0" />
-            <element signature="e#4804#5427#1" />
-            <element signature="e#5069#5277#1" />
-            <element signature="e#5370#5417#1" />
-            <element signature="method#startForTimeBruteForce#0;class#Simulation#0" />
-            <element signature="e#6063#6616#1" />
-            <element signature="e#6219#6427#1" />
-            <element signature="method#startBruteForce#0;class#Simulation#0" />
-            <element signature="e#7085#7371#1" />
-            <element signature="method#startForAnimation#0;class#Simulation#0" />
-            <element signature="e#7875#8612#1" />
-            <element signature="e#7980#8265#1" />
-            <element signature="e#8269#8602#1" />
-            <element signature="e#8533#8588#1" />
-            <element signature="method#startForAnimationBruteForce#0;class#Simulation#0" />
-            <element signature="e#9051#9500#1" />
-            <element signature="e#9171#9315#1" />
-            <element signature="e#9319#9490#1" />
-            <element signature="method#updateQueue#0;class#Simulation#0" />
-            <element signature="e#9783#9873#1" />
-            <element signature="e#9923#10254#1" />
-            <element signature="e#9965#10244#1" />
-            <element signature="e#10110#10230#1" />
-            <element signature="method#calculateNextCrashTimeForEveryone#0;class#Simulation#0" />
-            <element signature="method#calculateNextCrashTimeForEveryone#1;class#Simulation#0" />
-            <element signature="e#10659#11397#1" />
-            <element signature="e#10820#10906#1" />
-            <element signature="e#10957#11232#1" />
-            <element signature="e#11102#11218#1" />
-            <element signature="method#getNextCrashTime#0;class#Simulation#0" />
-            <element signature="e#11575#12255#1" />
-            <element signature="e#11698#11809#1" />
-            <element signature="e#11904#12245#1" />
-            <element signature="e#11943#12231#1" />
-            <element signature="e#12067#12213#1" />
-            <element signature="method#particlesCrash#0;class#Simulation#0" />
-            <element signature="e#12642#12698#1" />
-            <element signature="e#12901#12957#1" />
-            <element signature="method#wallCrash#0;class#Simulation#0" />
-            <element signature="e#13193#13289#1" />
-            <element signature="e#13317#13403#1" />
-            <element signature="e#13434#13531#1" />
-            <element signature="e#13559#13645#1" />
-            <element signature="method#updateParticlesPosition#0;class#Simulation#0" />
-            <element signature="e#13814#13963#1" />
-            <element signature="method#saveCrashedParticle#0;class#Simulation#0" />
-            <element signature="method#saveCrashedParticle#1;class#Simulation#0" />
-            <element signature="method#updateSpeedCrashedParticles#0;class#Simulation#0" />
-            <element signature="e#14603#14831#1" />
-            <element signature="e#14695#14755#1" />
-            <element signature="e#14761#14821#1" />
-            <element signature="e#14919#16048#1" />
-            <element signature="method#crashedAgainstVerticalWall#0;class#Simulation#0" />
-            <element signature="e#16212#16248#1" />
-            <element signature="e#16311#16347#1" />
-            <element signature="method#closeBW#0;class#Simulation#0" />
-            <element signature="e#16446#16517#0" />
-            <element signature="method#initalizeBW#0;class#Simulation#0" />
-            <element signature="e#16616#16741#0" />
-            <element signature="e#16763#16833#0" />
-            <element signature="method#generateFileString#0;class#Simulation#0" />
-            <element signature="method#appendParticles#0;class#Simulation#0" />
-            <element signature="e#17369#17983#1" />
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Results/animation/eventDriven2019-04-12T01:18:25.130.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Results/animation/eventDriven2019-04-12T01:30:45.487.txt">
+      <provider selected="true" editor-type-id="LargeFileEditor">
+        <state relative-caret-position="-2304" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/utils/src/main/java/ar/edu/itba/ParticleWithMass.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="175">
+          <caret line="54" selection-start-line="54" selection-end-line="54" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1146#1147#0" expanded="true" />
+            <element signature="e#1175#1176#0" expanded="true" />
+            <element signature="e#1237#1238#0" expanded="true" />
+            <element signature="method#equals#0;class#ParticleWithMass#0" />
+            <element signature="method#toString#0;class#ParticleWithMass#0" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/brownianMovement/src/main/java/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="19" lean-forward="true" selection-start-line="4" selection-start-column="19" selection-end-line="4" selection-end-column="19" />
+        <state relative-caret-position="120">
+          <caret line="8" column="90" selection-start-line="8" selection-start-column="90" selection-end-line="8" selection-end-column="90" />
           <folding>
             <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/brownianMovement/src/main/java/Simulation.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="281">
+          <caret line="178" column="17" selection-start-line="178" selection-start-column="17" selection-end-line="178" selection-end-column="17" />
+          <folding>
+            <element signature="method#Simulation#0;class#Simulation#0" />
+            <element signature="method#calculateNextCrashTimeForEveryone#0;class#Simulation#0" />
+            <element signature="method#calculateNextCrashTimeForEveryone#1;class#Simulation#0" />
+            <element signature="method#getNextCrashTime#0;class#Simulation#0" />
+            <element signature="method#particlesCrash#0;class#Simulation#0" />
+            <element signature="method#wallCrash#0;class#Simulation#0" />
+            <element signature="method#updateParticlesPosition#0;class#Simulation#0" />
+            <element signature="method#saveCrashedParticle#0;class#Simulation#0" />
+            <element signature="method#saveCrashedParticle#1;class#Simulation#0" />
+            <element signature="method#updateSpeedCrashedParticles#0;class#Simulation#0" />
+            <element signature="method#crashedAgainstVerticalWall#0;class#Simulation#0" />
+            <element signature="method#closeBW#0;class#Simulation#0" />
+            <element signature="method#initalizeBW#0;class#Simulation#0" />
+            <element signature="method#generateFileString#0;class#Simulation#0" />
+            <element signature="method#appendParticles#0;class#Simulation#0" />
+            <element signature="method#appendToFile#0;class#Simulation#0" />
           </folding>
         </state>
       </provider>

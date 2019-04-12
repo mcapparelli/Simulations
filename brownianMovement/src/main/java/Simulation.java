@@ -13,12 +13,7 @@ public class Simulation {
     private BufferedWriter bw;
     private PriorityQueue<Collision> queue;
 
-    private final double smallRadius = 0.005; // meters
-    private final double smallMass = 0.1; // grams
     private final double largeRadius = 0.05; // meters
-    private final double largeMass = 100; // grams
-    private final double maxSpeed = 0.1;
-
     private double time;
 
 
@@ -64,27 +59,25 @@ public class Simulation {
         closeBW();
     }
 
-    public void startUntilCrash(String outPath) {
+    public void StartAndStopWhenBigParticleCrashes(String outPath) {
         long start= System.currentTimeMillis();
         double nextTime =1;
         int collisions =0;
 
         if (!initalizeBW(outPath)) return;
 
-        appendToFile(bw,"particles: "+particles.size()+ " end UntilCrash\n");
+        appendToFile(bw,"X\tY\r\n");//"+particles.size()+ " end UntilCrash\n");
 
         StringBuilder builder = new StringBuilder();
-        particles.stream().forEach((x)->builder.append(Math.sqrt(Math.pow(x.getxSpeed(),2)+Math.pow(x.getySpeed(),2))+"\n"));
+        ParticleWithMass bigParticle = particles.stream()
+                                                .filter(bigBall -> bigBall.getRadius() == largeRadius)
+                                                .findAny()
+                                                .get();
+        builder.append(bigParticle.getxPosition() + "\t" + bigParticle.getyPosition() + "\n");
         appendToFile(bw,builder.toString());
-        ParticleWithMass largePaticle=null;
-        for(ParticleWithMass p : particles){
-            if(p.getRadius() == largeRadius){
-                largePaticle = p;
-            }
-        }
 
         calculateNextCrashTimeForEveryone();
-
+        Long counter = new Long(0);
         while(true) {
             Collision nextCollision = queue.poll();
             updateParticlesPosition(nextCollision.getTime()-time);
@@ -101,25 +94,28 @@ public class Simulation {
             for(ParticleWithMass p : nextCollision.getParticles()){
                 updateQueue(p);
             }
-            if(nextCollision.contains(largePaticle) && nextCollision.getParticles().size()==1){
+            if(nextCollision.contains(bigParticle) && nextCollision.getParticles().size()==1){
                 break;
             }
+            if(counter % 1000 == 0){
+                ParticleWithMass bigParticle2 = particles.stream()
+                        .filter(bigBall -> bigBall.getRadius() == largeRadius)
+                        .findAny()
+                        .get();
+                builder.append(bigParticle.getxPosition() + "\t" + bigParticle.getyPosition() + "\n");
+                appendToFile(bw,builder.toString());
+            }
+            counter++;
         }
 
-        appendToFile(bw,"--------------------------------\n");
-        StringBuilder builder2 = new StringBuilder();
-        particles.stream().forEach((x)->builder2.append(Math.sqrt(Math.pow(x.getxSpeed(),2)+Math.pow(x.getySpeed(),2))+"\n"));
-        appendToFile(bw,builder2.toString());
         long end = System.currentTimeMillis();
 
-        appendToFile(bw,"Simulated time: "+time+"s\n");
-        appendToFile(bw,"Proccesing time:"+(end-start)+"ms\n");
         System.out.println("Simulated time: "+time+"s");
         System.out.println("Proccesing time:"+(end-start)+"ms");
         closeBW();
     }
 
-    public void startForTime(double endTime, String outPath) {
+    public void startWithTimeSet(double endTime, String outPath) {
         long start= System.currentTimeMillis();
         double nextTime =1;
         int collisions =0;
@@ -152,53 +148,8 @@ public class Simulation {
 
     }
 
-    public void startForTimeBruteForce(double endTime,String outPath) {
-        long start= System.currentTimeMillis();
-        final Set<ParticleWithMass> crashedParticles = new HashSet<>();
-        if (!initalizeBW(outPath)) return;
-        double nextTime =1;
-        int collisions =0;
-        while (time<endTime) {
-            double nextCrashTime = getNextCrashTime(crashedParticles);
-            updateParticlesPosition(nextCrashTime);
-            if(time > nextTime){
-                System.out.println(collisions+ "\t"+nextTime+" s");
-                appendToFile(bw,collisions+ "\t"+nextTime+" s\n");
-                nextTime++;
-                collisions=0;
-            }
-            collisions++;
-
-            updateSpeedCrashedParticles(crashedParticles);
-            time+=nextCrashTime;
-            appendToFile(bw,generateFileString(particles));
-        }
-        long end = System.currentTimeMillis();
-
-        System.out.println("Simulated time: "+time+"s");
-        System.out.println("Proccesing time:"+(end-start)+"ms");
-        closeBW();
-    }
-
-    public void startBruteForce(int iterations,String outPath) {
-        long start= System.currentTimeMillis();
-        final Set<ParticleWithMass> crashedParticles = new HashSet<>();
-        if (!initalizeBW(outPath)) return;
-        for(int i = 0; i < iterations; i++) {
-            double nextCrashTime = getNextCrashTime(crashedParticles);
-            updateParticlesPosition(nextCrashTime);
-            updateSpeedCrashedParticles(crashedParticles);
-            time+=nextCrashTime;
-            appendToFile(bw,generateFileString(particles));
-        }
-        long end = System.currentTimeMillis();
-        System.out.println("Simulated time: "+time+"s");
-        System.out.println("Proccesing time:"+(end-start)+"ms");
-        closeBW();
-    }
-
     public void startForAnimation(int animationTime, String outPath){
-        int framesPerSecond = 24;
+        int framesPerSecond = 10;
         double jump = (double)1/framesPerSecond;
         double nextFrame = jump;
         calculateNextCrashTimeForEveryone();
@@ -219,30 +170,6 @@ public class Simulation {
                 for(ParticleWithMass p : nextCollision.getParticles()){
                     updateQueue(p);
                 }
-            }
-        }
-        System.out.print("Time: "+time);
-        closeBW();
-    }
-
-    public void startForAnimationBruteForce(int animationTime, String outPath){
-        int framesPerSecond = 10;
-        double jump = (double)1/framesPerSecond;
-        double nextFrame = jump;
-        double time = 0;
-        final Set<ParticleWithMass> crashedParticles = new HashSet<>();
-
-        if (!initalizeBW(outPath)) return;
-        while (time<animationTime){
-            double nextCrashTime = getNextCrashTime(crashedParticles);
-            if(nextCrashTime +time > nextFrame){
-                appendToFile(bw,generateFileString(particles));
-                time=nextFrame;
-                nextFrame+=jump;
-            }else{
-                updateParticlesPosition(nextCrashTime);
-                updateSpeedCrashedParticles(crashedParticles);
-                time+=nextCrashTime;
             }
         }
         System.out.print("Time: "+time);
