@@ -151,6 +151,25 @@ public class IO {
         return builder;
     }
 
+    public static StringBuilder generateFileOscillator(StringBuilder builder, List<Result> results){
+        builder.append(1)
+                .append("\r\n")
+                .append("DeltaT\tXSol\tXLeap\tXBee\tXGear\t\r\n");
+        for(Result current: results){
+            builder.append(current.getTime())
+                    .append("\t")
+                    .append(current.getPositionSolution())
+                    .append("\t")
+                    .append(current.getPositionLeapFrog())
+                    .append("\t")
+                    .append(current.getPositionBeeman())
+                    .append("\t")
+                    .append(current.getPositionGear())
+                    .append("\r\n");
+        }
+        return builder;
+    }
+
     public static StringBuilder generateFileTimeVa(int time, double va, StringBuilder builder){
         builder.append("\r\n")
                .append("T\tVa\r\n");
@@ -214,6 +233,14 @@ public class IO {
     public static void writeToFileOffLatticeXYZ(String name, String data, String path){
         try {
             Files.write(Paths.get(path + "/" + name + ".xyz"), data.getBytes());
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public static void writeToFileOscillator(String name, String data, String path){
+        try {
+            Files.write(Paths.get(path + "/" + name + ".txt"), data.getBytes());
         } catch (IOException e) {
             e.printStackTrace();
         }

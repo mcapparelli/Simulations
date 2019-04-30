@@ -73,7 +73,11 @@ public class Simulation {
                                                 .filter(bigBall -> bigBall.getRadius() == largeRadius)
                                                 .findAny()
                                                 .get();
-        builder.append(bigParticle.getxPosition() + "\t" + bigParticle.getyPosition() + "\n");
+        ParticleWithMass aParticle = particles.stream()
+                                              .filter(bigBall -> bigBall.getId() == 40)
+                                              .findAny()
+                                              .get();
+        builder.append(aParticle.getxPosition() + "\t" + aParticle.getyPosition() + "\n");
         appendToFile(bw,builder.toString());
 
         calculateNextCrashTimeForEveryone();
@@ -97,12 +101,11 @@ public class Simulation {
             if(nextCollision.contains(bigParticle) && nextCollision.getParticles().size()==1){
                 break;
             }
-            if(counter % 1000 == 0){
-                ParticleWithMass bigParticle2 = particles.stream()
-                        .filter(bigBall -> bigBall.getRadius() == largeRadius)
-                        .findAny()
-                        .get();
-                builder.append(bigParticle.getxPosition() + "\t" + bigParticle.getyPosition() + "\n");
+            if(counter % 10 == 0){
+                ParticleWithMass aParticle2 = particles.stream()
+                        .filter(bigBall -> bigBall.getId() == 40)
+                        .findAny().get();
+                builder.append(aParticle2.getxPosition() + "\t" + aParticle2.getyPosition() + "\n");
                 appendToFile(bw,builder.toString());
             }
             counter++;

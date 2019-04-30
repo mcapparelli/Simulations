@@ -7,11 +7,11 @@ public class Main {
     public static void main(String[] args) {
 
         Set<ParticleWithMass> particles = ParticleWithMass.generateParticles(new Long(12306), 200, 0.5, 0.005, 0.1, 0.1);
-        Simulation sim = new Simulation(0.5, particles);
-        sim.startForAnimation(600,"/Users/Cappa/ITBA/simulations/Results/animation");
+        //Simulation sim = new Simulation(0.5, particles);
+        //sim.startForAnimation(600,"/Users/Cappa/ITBA/simulations/Results/animation");
         //for(int i = 1; i < 11 ; i++){
-        //Simulation simulation = new Simulation(0.5, particles);
-            //simulation.StartAndStopWhenBigParticleCrashes("/Users/Cappa/ITBA/simulations/Results/heat");
+        Simulation simulation = new Simulation(0.5, particles);
+        simulation.StartAndStopWhenBigParticleCrashes("/Users/Cappa/ITBA/simulations/Results/heat");
         //}
 
         //simulation.StartAndStopWhenBigParticleCrashes("/Users/Cappa/ITBA/simulations/Results/untilCrash");

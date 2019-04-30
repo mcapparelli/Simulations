@@ -9,6 +9,7 @@
         <module name="brownianMovement" />
         <module name="cellIndexMethod" />
         <module name="offLatice" />
+        <module name="oscillator" />
         <module name="utils" />
       </profile>
     </annotationProcessing>

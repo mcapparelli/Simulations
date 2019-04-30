@@ -11,5 +11,6 @@
       <module>offLatice</module>
       <module>utils</module>
       <module>brownianMovement</module>
+      <module>oscillator</module>
   </modules>
 </project>
