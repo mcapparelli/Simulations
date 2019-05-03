@@ -8,10 +8,16 @@
         <outputRelativeToContentRoot value="true" />
         <module name="brownianMovement" />
         <module name="cellIndexMethod" />
+        <module name="llenn" />
         <module name="offLatice" />
         <module name="oscillator" />
         <module name="utils" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="lenard2" target="7" />
+      <module name="Lenard2" target="1.5" />
+      <module name="Lennard" target="8" />
+    </bytecodeTargetLevel>
   </component>
 </project>
