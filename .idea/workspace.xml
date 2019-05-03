@@ -1,16 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0b0d0e33-b037-41fd-8063-1aad5a488f1d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/oscillator/src/main/java/Particle.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/oscillator/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/oscillator/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/oscillator/src/main/java/DumpledOscillatorSolution.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/oscillator/src/main/java/Force.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/oscillator/src/main/java/LeapFrog.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/oscillator/src/main/java/OscillatorForce.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/oscillator/src/main/java/Simulation.java" beforeDir="false" afterPath="$PROJECT_DIR$/oscillator/src/main/java/Simulation.java" afterDir="false" />
-    </list>
+    <list default="true" id="0b0d0e33-b037-41fd-8063-1aad5a488f1d" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/target/" />
     <ignored path="$PROJECT_DIR$/cellIndexMethod/target/" />
     <ignored path="$PROJECT_DIR$/offLatice/target/" />
@@ -28,17 +19,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/oscillator/src/main/java/Simulation.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="333">
-              <caret line="251" column="34" selection-start-line="251" selection-start-column="34" selection-end-line="251" selection-end-column="34" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$USER_HOME$/Downloads/SimulacionDeSistemas-master-2/OsciladorAmortiguado/src/main/java/ar/edu/itba/ss/App.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="510">
-              <caret line="34" column="5" lean-forward="true" selection-start-line="4" selection-start-column="4" selection-end-line="34" selection-end-column="5" />
+            <state relative-caret-position="2329">
+              <caret line="202" selection-start-line="202" selection-end-line="202" />
             </state>
           </provider>
         </entry>
@@ -120,8 +102,8 @@
         <option value="$PROJECT_DIR$/oscillator/src/main/java/business/service/impl/FileServiceImpl.java" />
         <option value="$PROJECT_DIR$/oscillator/src/main/java/simulation/GasSimulation.java" />
         <option value="$PROJECT_DIR$/oscillator/src/main/java/Particle.java" />
-        <option value="$PROJECT_DIR$/oscillator/src/main/java/Simulation.java" />
         <option value="$PROJECT_DIR$/oscillator/src/main/java/Mine/Simulation.java" />
+        <option value="$PROJECT_DIR$/oscillator/src/main/java/Simulation.java" />
       </list>
     </option>
   </component>
@@ -200,15 +182,6 @@
             <path>
               <item name="simulations" type="b2602c69:ProjectViewProjectNode" />
               <item name="simulations" type="462c0819:PsiDirectoryNode" />
-              <item name="oscillator" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="Mine" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="simulations" type="b2602c69:ProjectViewProjectNode" />
-              <item name="simulations" type="462c0819:PsiDirectoryNode" />
               <item name="Results" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
@@ -220,7 +193,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1556846611287" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1556847277849" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Modules" />
@@ -351,18 +324,17 @@
       <workItem from="1555070987716" duration="312000" />
       <workItem from="1555341644056" duration="66000" />
       <workItem from="1556629713247" duration="11273000" />
-      <workItem from="1556845754550" duration="749000" />
+      <workItem from="1556845754550" duration="1339000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="75286000" />
+    <option name="totallyTimeSpent" value="75876000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
-    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.21030043" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21030043" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -371,7 +343,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.23734939" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.17831326" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.21566264" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.27830833" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -700,7 +672,7 @@
     <entry file="file://$USER_HOME$/Downloads/SimulacionDeSistemas-master-2/OsciladorAmortiguado/src/main/java/ar/edu/itba/ss/App.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="510">
-          <caret line="34" column="5" lean-forward="true" selection-start-line="4" selection-start-column="4" selection-end-line="34" selection-end-column="5" />
+          <caret line="34" column="5" selection-start-line="4" selection-start-column="4" selection-end-line="34" selection-end-column="5" />
         </state>
       </provider>
     </entry>
@@ -724,8 +696,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/oscillator/src/main/java/Simulation.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="333">
-          <caret line="251" column="34" selection-start-line="251" selection-start-column="34" selection-end-line="251" selection-end-column="34" />
+        <state relative-caret-position="2329">
+          <caret line="202" selection-start-line="202" selection-end-line="202" />
         </state>
       </provider>
     </entry>
