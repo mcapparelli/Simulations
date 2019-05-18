@@ -12,7 +12,7 @@ public class OscillatorForce implements ForceFunction {
     }
 
     @Override
-    public Vector2D getForce(Vector2D position, Vector2D velocity, List<Particle> neighbors) {
-        return new Vector2D(position).multiply(-k).add(velocity.multiply(-y));
+    public Point getForce(Point position, Point velocity, List<Particle> neighbors) {
+        return new Point(position).multiply(-k).add(velocity.multiply(-y));
     }
 }

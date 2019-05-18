@@ -8,6 +8,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="brownianMovement" />
         <module name="cellIndexMethod" />
+        <module name="Granular" />
         <module name="llenn" />
         <module name="offLatice" />
         <module name="oscillator" />

@@ -14,6 +14,7 @@
       <module>oscillator</module>
       <module>Lennard</module>
     <module>llenn</module>
+      <module>Granular</module>
   </modules>
   <dependencies>
     <dependency>

@@ -25,7 +25,7 @@ public class State {
     private double aY;
     private double aAngle;
     private double aModule;
-    private Optional<GPState> gpState;
+    private Optional<GPredictor> gpState;
 
     public State(double x, double y, double vX, double vY) {
         this.x = x;
@@ -99,10 +99,6 @@ public class State {
         return vY;
     }
 
-    public double getvAngle() {
-        return vAngle;
-    }
-
     public double getvModule() {
         return vModule;
     }
@@ -115,24 +111,12 @@ public class State {
         return aY;
     }
 
-    public double getaAngle() {
-        return aAngle;
-    }
-
-    public double getaModule() {
-        return aModule;
-    }
-
-    public void changeGPState(GPState gpState){
-        this.gpState = Optional.of(gpState);
-    }
-
-    public Optional<GPState> getGPState(){
+    public Optional<GPredictor> getGPState(){
         return gpState;
     }
     
     public void setNewGPState(Double x, Double y, Double vx, Double vy){
-        this.gpState = Optional.of(new GPState(x,y, vx, vy));
+        this.gpState = Optional.of(new GPredictor(x,y, vx, vy));
     }
 
     public void setX(double x) {

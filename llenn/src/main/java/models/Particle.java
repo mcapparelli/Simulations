@@ -3,9 +3,8 @@ package models;
 import java.util.Optional;
 
 public class Particle {
-    private static Long serial_id = Long.valueOf(0);
+    private static Long id_class = Long.valueOf(0);
 
-    private final Long id;
     private final double radius;
     private final double mass;
     private State previousState;
@@ -13,7 +12,7 @@ public class Particle {
     private State futureState;
 
     public Particle(double radius, double mass) {
-        this.id = serial_id++;
+        this.id_class = id_class++;
         this.radius = radius;
         this.mass = mass;
         this.previousState = new State();
@@ -22,7 +21,7 @@ public class Particle {
     }
 
     public Particle(double radius, double mass, State previousState, State currentState) {
-        this.id = serial_id++;
+        this.id_class = id_class++;
         this.radius = radius;
         this.mass = mass;
         this.previousState = previousState;
@@ -31,7 +30,7 @@ public class Particle {
     }
 
     public Particle(double radius, double mass, State currentState) {
-        this.id = serial_id++;
+        this.id_class = id_class++;
         this.radius = radius;
         this.mass = mass;
         this.previousState =  new State(0, 0, 0, 0, 0, 0);
@@ -43,7 +42,7 @@ public class Particle {
      * Big particles without radio and with infinite mass for simulating walls.
      */
     public Particle(long id,double x, double y) {
-        this.id = id;
+        this.id_class = id;
         currentState = new State(x, y, 0, 0, 0, 0);
         previousState = new State(0, 0, 0, 0, 0, 0);
         this.radius = 0;
@@ -51,7 +50,7 @@ public class Particle {
     }
 
     public Particle(double radius, double mass, double x, double y, double vx, double vy,double dt) {
-        this.id = serial_id++;
+        this.id_class = id_class++;
         this.radius = radius;
         this.mass = mass;
         currentState = new State(x, y, vx, vy, 0, 0);
@@ -61,7 +60,7 @@ public class Particle {
     }
 
     public Particle(double radius, double mass, double x, double y, double vx, double vy){
-        this.id = serial_id++;
+        this.id_class = id_class++;
         this.radius = radius;
         this.mass = mass;
         currentState = new State(x, y, vx, vy, 0, 0);
@@ -75,16 +74,16 @@ public class Particle {
 
         Particle particle = (Particle) o;
 
-        return id.equals(particle.id);
+        return id_class.equals(particle.id_class);
     }
 
     @Override
     public int hashCode() {
-        return id.hashCode();
+        return id_class.hashCode();
     }
 
     public Long getId() {
-        return id;
+        return id_class;
     }
 
     public double getRadius() {
@@ -137,16 +136,8 @@ public class Particle {
         return currentState.getaY();
     }
 
-    public Vector2D getPosition(){ return new Vector2D(getX(),getY());}
-    public Vector2D getPreviousPosition(){ return new Vector2D(getPreviousState().getX(),getPreviousState().getY());}
-    public Vector2D getVelocity(){ return new Vector2D(getvX(),getvY());}
-    public Vector2D getPreviousVelocity(){ return new Vector2D(getPreviousState().getvX(),getPreviousState().getvY());}
-    public Vector2D getAcceleration(){ return new Vector2D(getaX(),getaY());}
-    public Vector2D getPreviousAcceleration(){ return new Vector2D(getPreviousState().getaX(),getPreviousState().getaY());}
-
-    public Optional<GPState> getGPState(){
-        return currentState.getGPState();
-    }
+    public Point getPosition(){ return new Point(getX(),getY());}
+    public Point getPreviousPosition(){ return new Point(getPreviousState().getX(),getPreviousState().getY());}
 
     public void setX(double x ){
         this.currentState.setX(x);
@@ -158,10 +149,6 @@ public class Particle {
 
     public javafx.geometry.Point2D point2D(){
         return new javafx.geometry.Point2D(getX(),getY());
-    }
-
-    public void initializeGPState(Double x, Double y, Double vx, Double vy){
-        currentState.setNewGPState(x,y, vx, vy);
     }
 
 }
