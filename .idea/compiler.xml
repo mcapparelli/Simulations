@@ -6,13 +6,13 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="brownianMovement" />
         <module name="cellIndexMethod" />
-        <module name="Granular" />
-        <module name="llenn" />
         <module name="offLatice" />
-        <module name="oscillator" />
+        <module name="Granular" />
+        <module name="brownianMovement" />
+        <module name="llenn" />
         <module name="utils" />
+        <module name="oscillator" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>

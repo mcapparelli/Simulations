@@ -1,6 +1,6 @@
 import java.util.Optional;
 
-public class Particle {
+public class Particle implements Comparable<Particle>{
     private final int id;
     private final double radius;
     private final double mass;
@@ -20,9 +20,6 @@ public class Particle {
     private Optional<Vector> nextSpeedCorrected;
 
     private double totalFn;
-
-
-
 
     private Particle(Particle p, Vector position, Vector speed, Vector previousAcc){
         this.id=p.id;
@@ -101,11 +98,10 @@ public class Particle {
     public Vector getNextSpeedPredicted() {
         return nextSpeedPredicted.orElseThrow(IllegalStateException::new);
     }
+
     public Vector getNextSpeedCorrected() {
         return nextSpeedCorrected.orElseThrow(IllegalStateException::new);
     }
-
-
 
     public void setNextPosition(Vector nextPosition){
         if(this.nextPosition.isPresent()){
@@ -193,5 +189,10 @@ public class Particle {
         temp = Double.doubleToLongBits(getMass());
         result = 31 * result + (int) (temp ^ (temp >>> 32));
         return result;
+    }
+
+    @Override
+    public int compareTo(Particle o) {
+        return id - o.getId();
     }
 }

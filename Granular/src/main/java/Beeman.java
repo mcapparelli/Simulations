@@ -19,12 +19,10 @@ public class Beeman implements Integrator {
         for(Particle p : allparticles){
             neighbours.put(p, Collections.emptySet());
         }
-
     }
 
     @Override
     public Set<Particle> integrate(Set<Particle> allParticles) {
-
         calculateAcceleration(allParticles);
         calculateNextPosition(allParticles);
         calculateNextSpeedPredicted(allParticles);
@@ -66,7 +64,6 @@ public class Beeman implements Integrator {
             double nextVx = sp.getX() + 3.0 / 2.0 * ac.getX() * dt - 1.0 / 2.0 * prAc.getX() * dt;
             double nextVy = sp.getY() + 3.0 / 2.0 * ac.getY() * dt - 1.0 / 2.0 * prAc.getY() * dt;
 
-
             p.setNextSpeedPredicted(Vector.of(nextVx, nextVy));
         }
 
@@ -75,7 +72,6 @@ public class Beeman implements Integrator {
     private void calculateNextAcceleration(Set<Particle> allParticles) {
 
         //neighbours = Engine.bruteForce(allParticles, 0,Particle::getNextPosition);
-
         neighbours = neighbourCalculator.getNeighbours(allParticles,Particle::getNextPosition);
         for (Particle p : allParticles) {
             Vector acceleration = forceCalculator.calculate(p, neighbours.get(p), Particle::getNextPosition,Particle:: getNextSpeedPredicted)
@@ -96,7 +92,6 @@ public class Beeman implements Integrator {
 
             double nextVx = sp.getX() + 1.0 / 3.0 * neAc.getX() * dt + 5.0 / 6.0 * ac.getX() * dt - 1.0 / 6.0 * prAc.getX() * dt;
             double nextVy = sp.getY() + 1.0 / 3.0 * neAc.getY() * dt + 5.0 / 6.0 * ac.getY() * dt - 1.0 / 6.0 * prAc.getY() * dt;
-
 
             p.setNextSpeedCorrected(Vector.of(nextVx, nextVy));
         }

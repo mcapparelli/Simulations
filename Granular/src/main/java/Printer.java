@@ -82,9 +82,9 @@ public class Printer {
                     .append(" ")
                     .append(new Double(vy).floatValue())
                     .append(" ")
-                    .append(new Double(fn).floatValue() * 2550)
+                    .append(Math.sqrt(Math.pow(new Double(fn).floatValue(),2)) * 255.0/2.0)
                     .append(" ")
-                    .append(2550 - 2550 * new Double(fn).floatValue())
+                    .append(255)
                     .append(" ")
                     .append(255)
                     .append("\r\n");

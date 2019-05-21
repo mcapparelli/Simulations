@@ -8,6 +8,7 @@ public class Silo {
     private static double maxRadius = 0.015; // m
     private static double mass = 0.01; // kg
 
+    private Set<Particle> aux = new HashSet<Particle>();
     private Printer timePrinter;
 
     public Silo(double L, double W, double D) {
@@ -34,24 +35,23 @@ public class Silo {
     public void start(String outPath,double finalTime){
         Printer printer = new Printer(outPath, L, W, D);
         timePrinter = new Printer(outPath+"_time", 0, 0, 0);
-        Printer timeToScape = new Printer(outPath+"_timeToScape", 0, 0, 0);
+        //Printer timeToScape = new Printer(outPath+"_timeToScape", 0, 0, 0);
+        Printer energy = new Printer(outPath+"_energy", 0, 0, 0);
         Integrator integrator = new Beeman(new ForceCalculator(L, W, D), new NeighbourCalculator(L,W,0
                                                                                                 ,maxRadius), dt,particles);
-        List<Double> timesWhenEscape = new LinkedList<>();
         int iterations = 0;
         while(time < finalTime && iterations < 100000) {
 
-            addTime(particles, timeToScape);
+            //addTime(timeToScape);
 
             particles = integrator.integrate(particles);
             particles = removeFallenParticles(time);
 
             if(iterations % 100 == 0) {
                 printer.appendToFile(particles);
+                getEnergy(energy);
                 System.out.println("Time: " + time + "\t iterations: " + iterations);
             }
-
-            addTime(particles, timeToScape);
 
             particles = integrator.integrate(particles);
             particles = removeFallenParticles(time);
@@ -63,13 +63,15 @@ public class Silo {
 
         printer.close();
         timePrinter.close();
-        timeToScape.close();
+        //timeToScape.close();
     }
 
-    private void addTime(Set<Particle> particles, Printer printer){
+    private void addTime(Printer printer){
         for(Particle p : particles) {
-            if(p.getPosition().getY() < 0)
+            if(p.getPosition().getY() < -0.01 && !aux.contains(p)){
                 printer.appendToFile(time + "\n");
+                aux.add(p);
+            }
         }
     }
 
@@ -124,8 +126,10 @@ public class Silo {
             if(p.getPosition().getY() > -L/10) {
                 newParticles.add(p);
             } else {
+                if(p.getPosition().getY() < -0.01) {
+                    timePrinter.appendToFile(time + "\n");
+                }
                 addParticle(p, newParticles);
-                timePrinter.appendToFile(time + "\n");
                 timePrinter.flush();
             }
         }
